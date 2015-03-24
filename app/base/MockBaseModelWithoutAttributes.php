@@ -9,6 +9,6 @@
 namespace Base;
 
 
-class MockBaseModelWithoutAttributes {
+class MockBaseModelWithoutAttributes extends BaseModel {
 
 }

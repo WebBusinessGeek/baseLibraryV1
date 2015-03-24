@@ -22,7 +22,7 @@ abstract class BaseInternalService {
         {
             throw new \Exception('Model is not set on Internal Service');
         }
-        elseif($this->model->modelAttributes = null)
+        elseif($this->getModelAttributes() == null)
         {
             throw new \Exception('Attributes not set on Model');
         }
@@ -52,6 +52,11 @@ abstract class BaseInternalService {
         return $storeResponse;
     }
 
+
+    public function getModelAttributes()
+    {
+        return $this->model->getSelfAttributes();
+    }
 
     public function runValidationLogic($credentialsOrAttributes = [])
     {

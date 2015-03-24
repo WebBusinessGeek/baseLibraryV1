@@ -9,7 +9,7 @@
 namespace tests;
 
 
-use Base\MockBaseInternalService;
+use Base\MockBaseInternalService as MockBaseInternalService;
 use Base\MockBaseModelWithoutAttributes;
 
 class MockBaseInternalServiceTest extends \TestCase {
@@ -22,7 +22,8 @@ class MockBaseInternalServiceTest extends \TestCase {
      */
     public function test_internalServices_must_have_a_model()
     {
-        return new MockBaseInternalService();
+        $this->setExpectedException('Exception', 'Model is not set on Internal Service');
+        $mockBaseInternalService = new MockBaseInternalService();
     }
 
 
@@ -33,11 +34,11 @@ class MockBaseInternalServiceTest extends \TestCase {
      */
     public function test_models_on_internalServices_must_have_attributes()
     {
+        $this->setExpectedException('Exception', 'Attributes not set on Model');
         $mockBaseModelWithoutAttributes = new MockBaseModelWithoutAttributes();
-
         return new MockBaseInternalService($mockBaseModelWithoutAttributes);
     }
 
 
-    
+
 }
