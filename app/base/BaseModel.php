@@ -48,14 +48,20 @@ abstract class BaseModel extends Model{
 
     public function checkSelfAcceptsAttributes($attributesToCheck = [])
     {
-        //get attributeNames
-        //loop attributes
-        //count any attributes that are not in attributeNames
-        //ifcount is greater than one return false
-        //otherwise return true
+        $attributeNamesToMatch = $this->getSelfAttributesByName();
+        $falseCounter = 0;
+
+        foreach($attributesToCheck as $attributeNameToCheck => $attributeValue)
+        {
+            if(!in_array($attributeNameToCheck, $attributeNamesToMatch))
+            {
+                $falseCounter++;
+            }
+        }
+        return ($falseCounter <= 0) ? : false;
     }
 
-    public function getAttributesByName()
+    public function getSelfAttributesByName()
     {
         $modelAttributes = $this->getSelfAttributes();
 

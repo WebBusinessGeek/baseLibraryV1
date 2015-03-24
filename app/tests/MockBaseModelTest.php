@@ -20,11 +20,15 @@ class MockBaseModelTest extends \TestCase {
     public function test_getAttributesByName_method_gets_all_attribute_names_available_on_model()
     {
         $model = new MockBaseModel();
-        $attributeNames = $model->getAttributesByName();
+        $attributeNames = $model->getSelfAttributesByName();
         $this->assertEquals('attribute1', $attributeNames[0]);
     }
 
-   /* public function test_checkSelfAcceptsAttributes_method_returns_false_if_attributes_not_accepted()
+
+    /**
+     * @group baseModelTests
+     */
+    public function test_checkSelfAcceptsAttributes_method_returns_false_if_attributes_not_accepted()
     {
         $badAttributes = [
             'badAttributeName' => 'someValue'
@@ -36,6 +40,10 @@ class MockBaseModelTest extends \TestCase {
         $this->assertFalse($response);
     }
 
+
+    /**
+     * @group baseModelTests
+     */
     public function test_checkSelfAcceptsAttributes_method_returns_true_if_attributes_are_accepted()
     {
         $goodAttributes = [
@@ -46,5 +54,5 @@ class MockBaseModelTest extends \TestCase {
         $response = $model->checkSelfAcceptsAttributes($goodAttributes);
 
         $this->assertTrue($response);
-    }*/
+    }
 }
