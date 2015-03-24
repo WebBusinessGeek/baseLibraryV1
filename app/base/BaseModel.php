@@ -46,6 +46,11 @@ abstract class BaseModel extends Model{
     ];
 
 
+    /**Allows model instance to check if it accepts attributes passed.
+     * Returns true if it does. False if not.
+     * @param array $attributesToCheck
+     * @return bool
+     */
     public function checkSelfAcceptsAttributes($attributesToCheck = [])
     {
         $attributeNamesToMatch = $this->getSelfAttributesByName();
@@ -61,6 +66,10 @@ abstract class BaseModel extends Model{
         return ($falseCounter <= 0) ? : false;
     }
 
+
+    /**Returns the model's attribute names only as an array.
+     * @return array
+     */
     public function getSelfAttributesByName()
     {
         $modelAttributes = $this->getSelfAttributes();
@@ -74,6 +83,9 @@ abstract class BaseModel extends Model{
     }
 
 
+    /**Returns the entire modelAttributes array as a multiDimensional array.
+     * @return array
+     */
     public function getSelfAttributes()
     {
         return $this->modelAttributes;

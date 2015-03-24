@@ -61,10 +61,38 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
 
+    /**
+     *@group mockInternalServiceTests
+     */
     public function test_checkModelAcceptsAttributes_method_returns_false_if_model_does_not_accept_attribute_names()
     {
+        $badAttributes = [
+            'badAttribute' => 'someValue',
+            'badAttribute2' => 'someValue'
+        ];
 
+        $mockBaseModel = new MockBaseModel();
+        $internalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $internalService->checkModelAcceptsAttributes($badAttributes);
+        $this->assertFalse($response);
     }
 
+    /**
+     *@group mockInternalServiceTests
+     */
+    public function test_checkModelAcceptsAttributes_method_returns_true_if_model_does_accept_attribute_names()
+    {
+        $goodAttributes = [
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+        ];
+
+        $mockBaseModel = new MockBaseModel();
+        $internalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $internalService->checkModelAcceptsAttributes($goodAttributes);
+        $this->assertTrue($response);
+    }
 
 }

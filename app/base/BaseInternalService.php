@@ -74,10 +74,14 @@ abstract class BaseInternalService {
     }
 
 
-    /*UNTESTED*/
+    /**Checks if the model accepts the attributes or credentials being passed.
+     * Returns True if it does. False if not.
+     * @param array $credentialsOrAttributes
+     * @return mixed
+     */
     public function checkModelAcceptsAttributes($credentialsOrAttributes = [])
     {
-        return $this->model->checkSelfAcceptsAttributes();
+        return $this->model->checkSelfAcceptsAttributes($credentialsOrAttributes);
     }
 
 
