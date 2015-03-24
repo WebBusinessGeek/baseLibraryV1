@@ -11,4 +11,49 @@ namespace Base;
 
 class MockBaseModel extends BaseModel {
 
+    protected $modelAttributes = [
+        //		START AT ZERO (0)!!! => [
+        //
+        //			'name' => 'nameOfAttribute',
+        //
+        //			'format' => '(choose 1: email, phoneNumber, url, password,
+        //							 string, exists, enum, text, id, token, ipAddress, date)',
+        //
+        //			'nullable' => false,
+        //
+        //			'unique' => true,
+        //
+        //			'exists' => null,
+        //
+        //          'identifier' => false,
+        //
+        //          'key' => false,
+        //
+        //
+        //			'enumValues' => [
+        //				'item1',
+        //				'item2',
+        //				'item3'
+        //			]
+        //		],
+
+        0 => [
+            'name' => 'attribute1',
+
+            'format' => 'string',
+
+            'nullable' => false,
+
+            'unique' => true,
+
+            'exists' => null,
+
+            'identifier' => false,
+
+            'key' => false,
+
+        ]
+    ];
+
+
 }
