@@ -15,6 +15,7 @@ abstract class BaseInternalService {
 
     public $model;
 
+
     public function __construct()
     {
         if($this->model == null)
