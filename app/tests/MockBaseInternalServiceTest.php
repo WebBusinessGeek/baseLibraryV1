@@ -10,6 +10,7 @@ namespace tests;
 
 
 use Base\MockBaseInternalService as MockBaseInternalService;
+use Base\MockBaseModel;
 use Base\MockBaseModelWithoutAttributes;
 
 class MockBaseInternalServiceTest extends \TestCase {
@@ -37,6 +38,26 @@ class MockBaseInternalServiceTest extends \TestCase {
         $this->setExpectedException('Exception', 'Attributes not set on Model');
         $mockBaseModelWithoutAttributes = new MockBaseModelWithoutAttributes();
         return new MockBaseInternalService($mockBaseModelWithoutAttributes);
+    }
+
+
+    /**
+     * @group mockInternalServiceTests
+     * @group internalServiceConstructorTests
+     * @group internalServiceFrameworkTests
+     */
+    public function test_internalService_containing_a_model_with_attributes_does_not_throw_exception()
+    {
+        $exceptionCatcher = null;
+        try{
+            $mockBaseModelWithAttributes = new MockBaseModel();
+            $mockBaseInternalService = new MockBaseInternalService($mockBaseModelWithAttributes);
+        }
+        catch(\Exception $e)
+        {
+            $exceptionCatcher = $e;
+        }
+        $this->assertNull($exceptionCatcher);
     }
 
 
