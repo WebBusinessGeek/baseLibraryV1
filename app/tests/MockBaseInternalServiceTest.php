@@ -61,5 +61,10 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
 
+    public function test_checkModelAcceptsAttributes_method_returns_false_if_model_does_not_accept_attribute_names()
+    {
+
+    }
+
 
 }

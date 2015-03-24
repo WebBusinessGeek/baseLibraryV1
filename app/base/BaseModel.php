@@ -11,7 +11,7 @@ namespace Base;
 
 use Illuminate\Database\Eloquent\Model;
 
-class BaseModel extends Model{
+abstract class BaseModel extends Model{
 
     protected $primaryOwnerClassName;
 
@@ -44,6 +44,28 @@ class BaseModel extends Model{
         //		],
 
     ];
+
+
+    public function checkSelfAcceptsAttributes($attributesToCheck = [])
+    {
+        //get attributeNames
+        //loop attributes
+        //count any attributes that are not in attributeNames
+        //ifcount is greater than one return false
+        //otherwise return true
+    }
+
+    public function getAttributesByName()
+    {
+        $modelAttributes = $this->getSelfAttributes();
+
+        $attributeNameContainer = [];
+        foreach($modelAttributes as $attribute)
+        {
+            array_push($attributeNameContainer, $attribute['name']);
+        }
+        return $attributeNameContainer;
+    }
 
 
     public function getSelfAttributes()

@@ -52,6 +52,40 @@ class MockBaseModel extends BaseModel {
 
             'key' => false,
 
+        ],
+
+        1 => [
+
+            'name' => 'attribute2',
+
+            'format' => 'string',
+
+            'nullable' => false,
+
+            'unique' => true,
+
+            'exists' => null,
+
+            'identifier' => false,
+
+            'key' => false,
+        ],
+
+        2 => [
+
+            'name' => 'attribute3',
+
+            'format' => 'string',
+
+            'nullable' => false,
+
+            'unique' => true,
+
+            'exists' => null,
+
+            'identifier' => false,
+
+            'key' => false,
         ]
     ];
 

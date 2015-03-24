@@ -14,4 +14,6 @@
 Route::get('/', function()
 {
 	return View::make('hello');
+//	$model = new \Base\MockBaseModel();
+//	dd($model->getAttributesByName());
 });
