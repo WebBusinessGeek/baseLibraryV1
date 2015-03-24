@@ -11,7 +11,7 @@ namespace Base;
 
 class MockBaseInternalService extends BaseInternalService {
 
-    public function __construct(BaseModel $mockBaseModel)
+    public function __construct(BaseModel $mockBaseModel = null)
     {
         if($mockBaseModel)
         {

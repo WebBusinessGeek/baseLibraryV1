@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3488430f-fbf7-4678-bf2a-dc854a3d647e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/MockBaseModel.php" afterPath="$PROJECT_DIR$/app/base/MockBaseModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/MockBaseInternalService.php" afterPath="$PROJECT_DIR$/app/base/MockBaseInternalService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" afterPath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" />
     </list>
     <ignored path="baseLibrary.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,12 +30,14 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="MockBaseInternalService.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/base/MockBaseInternalService.php">
+          <file leaf-file-name="MockBaseInternalServiceTest.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4676259" vertical-offset="0" max-vertical-offset="695">
-                  <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-                  <folding />
+                <state vertical-scroll-proportion="1.1798561" vertical-offset="80" max-vertical-offset="1100">
+                  <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+                  <folding>
+                    <element signature="e#112#145#0#PHP" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -43,11 +46,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="MockBaseModel.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/base/MockBaseModel.php">
+          <file leaf-file-name="run-phpunit.sh" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/run-phpunit.sh">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3263473" vertical-offset="807" max-vertical-offset="1475">
-                  <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+                <state vertical-scroll-proportion="-0.43472022" vertical-offset="303" max-vertical-offset="1000">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -298,27 +301,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5755396" vertical-offset="0" max-vertical-offset="695">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-          <folding>
-            <marker date="1427209796000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1427209796000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427209796000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427209796000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/base/MockBaseInternalService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4676259" vertical-offset="0" max-vertical-offset="695">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/base/MockBaseModelWithoutAttributes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2877698" vertical-offset="0" max-vertical-offset="695">
@@ -340,9 +322,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/base/MockBaseModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3263473" vertical-offset="807" max-vertical-offset="1475">
+        <state vertical-scroll-proportion="1.5344311" vertical-offset="0" max-vertical-offset="1475">
           <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
+          <folding>
+            <marker date="1427210246000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427210246000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427210246000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427210246000" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1427210246000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/phpunit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1423687035000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1423687035000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/phpseclib/phpseclib/travis/run-phpunit.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.43472022" vertical-offset="303" max-vertical-offset="1000">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/base/MockBaseInternalService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64748204" vertical-offset="0" max-vertical-offset="695">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <marker date="1427210482000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427210482000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427210482000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427210482000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1798561" vertical-offset="80" max-vertical-offset="1100">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+          <folding>
+            <element signature="e#112#145#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
