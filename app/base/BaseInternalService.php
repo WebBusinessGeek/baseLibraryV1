@@ -32,43 +32,36 @@ abstract class BaseInternalService {
 
     public function store($credentialsOrAttributes = [])
     {
-        /*Hook - force child implementation by returning false*/
-        $validationLogicResponse = $this->runValidationLogic($credentialsOrAttributes);
-
-
+        $validationLogicResponse = $this->runValidationLogicHook($credentialsOrAttributes);
         $attributesAcceptedResponse = $this->checkModelAcceptsAttributes($credentialsOrAttributes);
-
 
         if($validationLogicResponse == false)
         {
-            /*not put in proper class yet*/
             return $this->sendMessage('Attributes failed validation.');
         }
         elseif($attributesAcceptedResponse == false)
         {
-            /*not put in proper class yet*/
             return $this->sendMessage('Attributes are not accepted by model.');
         }
 
-        /*Hook - child implementation is not necessary*/
-        $this->runPREAttributeManipulationLogic();
+        $manipulatedAttributes = $this->runPREandPOSTHooksAndReturnManipulatedAttributes($credentialsOrAttributes);
 
-        /*Hook - child implementation is not necessary, should only return attributes at this level*/
-        $manipulatedAttributes = $this->runAttributeManipulationLogic($credentialsOrAttributes);
-
-        /*Hook - child implementation is not necessary*/
-        $this->runPOSTAttributeManipulationLogic();
-
-        /*Implementation needed on parent*/
         $newModel = $this->addAttributesToNewModel($manipulatedAttributes);
-
-        /*Implementation needed on parent*/
         $storeResponse = $this->storeEloquentModel($newModel);
-
-        /*should store response be checked?*/
         return $storeResponse;
     }
 
+    public function runValidationLogicHook($credentialsOrAttributes = [])
+    {
+        return $this->runGeneralValidationLogic($credentialsOrAttributes);
+    }
+
+    public function runGeneralValidationLogic($attributesToValidate = [])
+    {
+        //format validator
+
+        return'';
+    }
 
     /**Returns the model's modelAttributes property as a multiDimensional array.
      * @return mixed
@@ -165,14 +158,18 @@ abstract class BaseInternalService {
     }
 
 
-    public function runValidationLogic($credentialsOrAttributes = [])
+    public function runPREandPOSTHooksAndReturnManipulatedAttributes($credentialsOrAttributes = [])
     {
-        return false;
+        $this->runPREAttributeManipulationLogic();
+        $manipulatedAttributes = $this->runAttributeManipulationLogic($credentialsOrAttributes);
+        $this->runPOSTAttributeManipulationLogic();
+        return $manipulatedAttributes;
     }
+
 
     public function runPREAttributeManipulationLogic()
     {
-        return '';
+        return;
     }
     public function runAttributeManipulationLogic($credentialsOrAttributes = [])
     {
@@ -180,7 +177,7 @@ abstract class BaseInternalService {
     }
     public function runPOSTAttributeManipulationLogic()
     {
-        return '';
+        return;
     }
 
 
