@@ -93,21 +93,21 @@ abstract class BaseModel extends Model{
     }
 
 
-
-    public function createNewSelfInstance()
+    /**Returns the class name of the BaseModel instance as a string.
+     * @return string
+     */
+    public function getSelfClassName()
     {
-        
+        return '\\'. get_class($this);
     }
+
 
     public function updateSelfAttributes($newAttributes = [])
     {
 
     }
 
-    public function getSelfClassName()
-    {
-        return '\\'. get_class($this);
-    }
+
 
 
     public function getSelfPrimaryOwnerClassName()

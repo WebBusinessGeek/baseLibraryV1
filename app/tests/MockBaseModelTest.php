@@ -57,8 +57,13 @@ class MockBaseModelTest extends \TestCase {
     }
 
 
-    public function test_createNewSelfInstance_method_returns_new_instance_of_class()
+    public function test_getSelfClassName_method_returns_name_of_class()
     {
+        $mockModel = new MockBaseModel();
 
+        $className = $mockModel->getSelfClassName();
+
+        $this->assertEquals('\Base\MockBaseModel', $className);
     }
+
 }

@@ -70,6 +70,16 @@ abstract class BaseInternalService {
     }
 
 
+    /**Returns the model's modelAttributes property as a multiDimensional array.
+     * @return mixed
+     */
+    public function getModelAttributes()
+    {
+        return $this->model->getSelfAttributes();
+    }
+
+
+
     /**Checks if the model accepts the attributes or credentials being passed.
      * Returns True if it does. False if not.
      * @param array $credentialsOrAttributes
@@ -94,6 +104,8 @@ abstract class BaseInternalService {
         throw new \Exception('Parameter must be of type - string');
     }
 
+
+//    WORKING ON THIS!
     public function addAttributesToNewModel($credentialsOrAttributes = [])
     {
         $newModel = $this->createNewModelInstance();
@@ -101,11 +113,25 @@ abstract class BaseInternalService {
         return $newModelWithAttributes;
     }
 
+    /**Creates a new instance of $model - property object's class.
+     * @return mixed
+     */
     public function createNewModelInstance()
     {
-        return $this->model->createNewSelfInstance();
+        $modelClassName = $this->getModelClassName();
+        $model = new $modelClassName();
+        return $model;
     }
 
+    /**Returns class name of the $model - property object.
+     * @return mixed
+     */
+    public function getModelClassName()
+    {
+        return $this->model->getSelfClassName();
+    }
+
+    
     public function updateAttributesOnExistingModel(Model $model, $newAttributes = [])
     {
         return $model->updateSelfAttributes($newAttributes);

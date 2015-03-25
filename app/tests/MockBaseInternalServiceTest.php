@@ -97,9 +97,28 @@ class MockBaseInternalServiceTest extends \TestCase {
 
 
 
+    public function test_getModelClassName_method_returns_className_of_the_model_property_object()
+    {
+        $mockBaseModel = new MockBaseModel();
+        $internalService = new MockBaseInternalService($mockBaseModel);
+
+        $classNameToTestAgainst = '\\' . get_class($mockBaseModel);
+        $className = $internalService->getModelClassName();
+
+        $this->assertEquals($classNameToTestAgainst, $className);
+    }
+
     public function test_createNewModelInstance_method_returns_a_instance_of_the_model_property_object()
     {
+        $mockBaseModel = new MockBaseModel();
+        $internalService = new MockBaseInternalService($mockBaseModel);
 
+        $modelInstance = $internalService->createNewModelInstance();
+
+        $classNameToTestAgainst = '\\' . get_class($mockBaseModel);
+        $classNameToTest = $modelInstance->getSelfClassName();
+
+        $this->assertTrue(is_object($modelInstance) && $classNameToTestAgainst == $classNameToTest);
     }
 
 
