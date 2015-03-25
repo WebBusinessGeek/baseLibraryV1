@@ -46,7 +46,7 @@ abstract class BaseModel extends Model{
     ];
 
 
-    /**Allows model instance to check if it accepts attributes passed.
+    /**Allows BaseModel instance to check if it accepts attributes passed.
      * Returns true if it does. False if not.
      * @param array $attributesToCheck
      * @return bool
@@ -67,7 +67,8 @@ abstract class BaseModel extends Model{
     }
 
 
-    /**Returns the model's attribute names only as an array.
+    /**Returns the model's attribute names only.
+     * Returns as an array.
      * @return array
      */
     public function getSelfAttributesByName()
@@ -91,6 +92,17 @@ abstract class BaseModel extends Model{
         return $this->modelAttributes;
     }
 
+
+
+    public function createNewSelfInstance()
+    {
+        
+    }
+
+    public function updateSelfAttributes($newAttributes = [])
+    {
+
+    }
 
     public function getSelfClassName()
     {

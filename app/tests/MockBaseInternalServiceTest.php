@@ -95,4 +95,32 @@ class MockBaseInternalServiceTest extends \TestCase {
         $this->assertTrue($response);
     }
 
+
+
+    public function test_createNewModelInstance_method_returns_a_instance_of_the_model_property_object()
+    {
+
+    }
+
+
+    public function test_updateAttributesOnExistingModel_method_returns_model()
+    {
+
+    }
+
+    public function test_updateAttributesOnExistingModel_method_returns_model_with_correct_attributes()
+    {
+
+    }
+
+    public function test_addAttributesToNewModel_method_returns_a_model()
+    {
+
+    }
+
+    public function test_addAttributesToNewModel_method_returns_a_model_with_correct_attributes()
+    {
+
+    }
+
 }

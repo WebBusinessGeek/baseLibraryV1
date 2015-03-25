@@ -36,20 +36,16 @@ abstract class BaseInternalService {
         $validationLogicResponse = $this->runValidationLogic($credentialsOrAttributes);
 
 
-        /*Implementation needed on parent*/
-        /*Not Done*/
         $attributesAcceptedResponse = $this->checkModelAcceptsAttributes($credentialsOrAttributes);
 
 
         if($validationLogicResponse == false)
         {
-            /*should be available for both internal and external services*/
             /*not put in proper class yet*/
             return $this->sendMessage('Attributes failed validation.');
         }
         elseif($attributesAcceptedResponse == false)
         {
-            /*should be available for both internal and external services*/
             /*not put in proper class yet*/
             return $this->sendMessage('Attributes are not accepted by model.');
         }
@@ -85,12 +81,38 @@ abstract class BaseInternalService {
     }
 
 
-
-
-    public function getModelAttributes()
+    /**Returns the message passed in if its a string.
+     * @param $message
+     * @return mixed
+     */
+    public function sendMessage($message)
     {
-        return $this->model->getSelfAttributes();
+        if(is_string($message))
+        {
+            return $message;
+        }
+        throw new \Exception('Parameter must be of type - string');
     }
+
+    public function addAttributesToNewModel($credentialsOrAttributes = [])
+    {
+        $newModel = $this->createNewModelInstance();
+        $newModelWithAttributes = $this->updateAttributesOnExistingModel($newModel, $credentialsOrAttributes);
+        return $newModelWithAttributes;
+    }
+
+    public function createNewModelInstance()
+    {
+        return $this->model->createNewSelfInstance();
+    }
+
+    public function updateAttributesOnExistingModel(Model $model, $newAttributes = [])
+    {
+        return $model->updateSelfAttributes($newAttributes);
+    }
+
+
+
 
 
 
@@ -111,18 +133,12 @@ abstract class BaseInternalService {
     {
         return '';
     }
-    public function addAttributesToNewModel($credentialsOrAttributes = [])
-    {
 
-    }
     public function storeEloquentModel(Model $model)
     {
 
     }
-    public function sendMessage($message)
-    {
-        return $message;
-    }
+
 
 
     public function show()

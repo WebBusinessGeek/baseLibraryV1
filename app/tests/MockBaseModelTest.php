@@ -55,4 +55,10 @@ class MockBaseModelTest extends \TestCase {
 
         $this->assertTrue($response);
     }
+
+
+    public function test_createNewSelfInstance_method_returns_new_instance_of_class()
+    {
+
+    }
 }
