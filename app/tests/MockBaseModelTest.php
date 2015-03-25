@@ -57,6 +57,9 @@ class MockBaseModelTest extends \TestCase {
     }
 
 
+    /**
+     *@group baseModelTests
+     */
     public function test_getSelfClassName_method_returns_name_of_class()
     {
         $mockModel = new MockBaseModel();
@@ -66,4 +69,29 @@ class MockBaseModelTest extends \TestCase {
         $this->assertEquals('\Base\MockBaseModel', $className);
     }
 
+
+    /**
+     *@group baseModelTests
+     */
+    public function test_updateSelfAttributes_method_adds_attributes_to_model()
+    {
+        $attributeName = 'attribute';
+        $valueName = 'value';
+
+        $attributes = [
+            'attribute1' => 'value1',
+            'attribute2' => 'value2',
+            'attribute3' => 'value3',
+        ];
+
+        $mockModel = new MockBaseModel();
+        $updatedMockModel = $mockModel->updateSelfAttributes($attributes);
+
+        for($count = 1; $count <= 3; $count++)
+        {
+            $attributeNameAndCount = $attributeName.$count;
+            $this->assertEquals($valueName.$count, $updatedMockModel->$attributeNameAndCount);
+        }
+
+    }
 }

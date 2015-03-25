@@ -131,7 +131,7 @@ abstract class BaseInternalService {
         return $this->model->getSelfClassName();
     }
 
-    
+
     public function updateAttributesOnExistingModel(Model $model, $newAttributes = [])
     {
         return $model->updateSelfAttributes($newAttributes);

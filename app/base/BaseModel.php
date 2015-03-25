@@ -104,7 +104,11 @@ abstract class BaseModel extends Model{
 
     public function updateSelfAttributes($newAttributes = [])
     {
-
+        foreach($newAttributes as $attributeName => $attributeValue)
+        {
+            $this->$attributeName = $attributeValue;
+        }
+        return $this;
     }
 
 
