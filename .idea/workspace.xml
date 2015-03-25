@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3488430f-fbf7-4678-bf2a-dc854a3d647e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/BaseModel.php" afterPath="$PROJECT_DIR$/app/base/BaseModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/BaseInternalService.php" afterPath="$PROJECT_DIR$/app/base/BaseInternalService.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" afterPath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" />
     </list>
     <ignored path="baseLibrary.iws" />
@@ -30,11 +30,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="MockBaseInternalServiceTest.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
+          <file leaf-file-name="BaseInternalService.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.78417265" vertical-offset="3230" max-vertical-offset="4325">
-                  <caret line="158" column="9" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
+                <state vertical-scroll-proportion="0.35971224" vertical-offset="2325" max-vertical-offset="5150">
+                  <caret line="108" column="38" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
                   <folding />
                 </state>
               </provider>
@@ -44,11 +44,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="MockBaseModelTest.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/tests/MockBaseModelTest.php">
+          <file leaf-file-name="MockBaseInternalServiceTest.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.352518" vertical-offset="1630" max-vertical-offset="2450">
-                  <caret line="80" column="7" selection-start-line="80" selection-start-column="7" selection-end-line="84" selection-end-column="10" />
+                <state vertical-scroll-proportion="0.0647482" vertical-offset="4655" max-vertical-offset="5375">
+                  <caret line="195" column="7" selection-start-line="195" selection-start-column="7" selection-end-line="195" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -196,7 +196,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="930" max-vertical-offset="1625">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1427296119000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder=" @group baseModelTests ..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder=" @group baseModelTests ..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder=" @group baseModelTests ..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="@group baseModelTests ..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="@group baseModelTests ..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -262,38 +279,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="3825">
           <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <marker date="1427294957000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" Returns True if it does. False if not. ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @param $message ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -301,38 +287,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1450" max-vertical-offset="3725">
           <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding>
-            <marker date="1427294957000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" Returns True if it does. False if not. ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @param $message ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -376,38 +331,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="3025">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <marker date="1427294957000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" Returns True if it does. False if not. ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @param $message ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -415,38 +339,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="2850">
           <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
-          <folding>
-            <marker date="1427294957000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" Returns True if it does. False if not. ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @param $message ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -555,57 +448,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/MockBaseModelTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64748204" vertical-offset="2875" max-vertical-offset="4875">
-          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.46043167" vertical-offset="1480" max-vertical-offset="2450">
+          <caret line="77" column="7" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
           <folding>
-            <marker date="1427294957000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" Returns True if it does. False if not. ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @param $message ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427294957000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427296119000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder=" @group baseModelTests ..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder=" @group baseModelTests ..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder=" @group baseModelTests ..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="@group baseModelTests ..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="@group baseModelTests ..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427296119000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/MockBaseModelTest.php">
+    <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.352518" vertical-offset="1630" max-vertical-offset="2450">
-          <caret line="80" column="7" selection-start-line="80" selection-start-column="7" selection-end-line="84" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.35971224" vertical-offset="2325" max-vertical-offset="5150">
+          <caret line="108" column="38" selection-start-line="108" selection-start-column="38" selection-end-line="108" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78417265" vertical-offset="3230" max-vertical-offset="4325">
-          <caret line="158" column="9" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0647482" vertical-offset="4655" max-vertical-offset="5375">
+          <caret line="195" column="7" selection-start-line="195" selection-start-column="7" selection-end-line="195" selection-end-column="7" />
           <folding />
         </state>
       </provider>

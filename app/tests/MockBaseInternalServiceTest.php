@@ -96,7 +96,9 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
 
-
+    /**
+     *@group mockInternalServiceTests
+     */
     public function test_getModelClassName_method_returns_className_of_the_model_property_object()
     {
         $mockBaseModel = new MockBaseModel();
@@ -108,6 +110,9 @@ class MockBaseInternalServiceTest extends \TestCase {
         $this->assertEquals($classNameToTestAgainst, $className);
     }
 
+    /**
+     *@group mockInternalServiceTests
+     */
     public function test_createNewModelInstance_method_returns_a_instance_of_the_model_property_object()
     {
         $mockBaseModel = new MockBaseModel();
@@ -122,6 +127,9 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
 
+    /**
+     *@group mockInternalServiceTests
+     */
     public function test_updateAttributesOnExistingModel_method_returns_model()
     {
         $attributes = [
@@ -140,6 +148,9 @@ class MockBaseInternalServiceTest extends \TestCase {
         $this->assertTrue(is_object($updatedModelInstance));
     }
 
+    /**
+     *@group mockInternalServiceTests
+     */
     public function test_updateAttributesOnExistingModel_method_returns_model_with_correct_attributes()
     {
         $attributes = [
@@ -161,14 +172,45 @@ class MockBaseInternalServiceTest extends \TestCase {
         }
     }
 
+    /**
+     *@group mockInternalServiceTests
+     */
     public function test_addAttributesToNewModel_method_returns_a_model()
     {
+        $attributes = [
+            'attribute1' => 'value1',
+            'attribute2' => 'value2',
+            'attribute3' => 'value3',
+        ];
 
+        $mockBaseModel = new MockBaseModel();
+        $internalService = new MockBaseInternalService($mockBaseModel);
+
+        $newModelWithAttributes = $internalService->addAttributesToNewModel($attributes);
+
+        $this->assertTrue(is_object($newModelWithAttributes));
     }
 
+    /**
+     *@group mockInternalServiceTests
+     */
     public function test_addAttributesToNewModel_method_returns_a_model_with_correct_attributes()
     {
+        $attributes = [
+            'attribute1' => 'value1',
+            'attribute2' => 'value2',
+            'attribute3' => 'value3',
+        ];
 
+        $mockBaseModel = new MockBaseModel();
+        $internalService = new MockBaseInternalService($mockBaseModel);
+
+        $newModelWithAttributes = $internalService->addAttributesToNewModel($attributes);
+
+        foreach($attributes as $attributeName => $attributeValue)
+        {
+            $this->assertEquals($attributeValue, $newModelWithAttributes->$attributeName);
+        }
     }
 
 }

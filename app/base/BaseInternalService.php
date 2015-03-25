@@ -105,7 +105,11 @@ abstract class BaseInternalService {
     }
 
 
-//    WORKING ON THIS!
+    /**Creates a new model instance and adds passed in attributes to it.
+     * Returns the new model instance.
+     * @param array $credentialsOrAttributes
+     * @return mixed
+     */
     public function addAttributesToNewModel($credentialsOrAttributes = [])
     {
         $newModel = $this->createNewModelInstance();
@@ -123,6 +127,7 @@ abstract class BaseInternalService {
         return $model;
     }
 
+
     /**Returns class name of the $model - property object.
      * @return mixed
      */
@@ -132,6 +137,12 @@ abstract class BaseInternalService {
     }
 
 
+    /**Updates the passed in model with the new attributes.
+     * Returns the updated model.
+     * @param Model $model
+     * @param array $newAttributes
+     * @return mixed
+     */
     public function updateAttributesOnExistingModel(Model $model, $newAttributes = [])
     {
         return $model->updateSelfAttributes($newAttributes);
