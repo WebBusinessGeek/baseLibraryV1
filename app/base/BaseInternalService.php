@@ -151,6 +151,14 @@ abstract class BaseInternalService {
 
 
 
+    public function storeEloquentModel(Model $model, $returnInstance = true)
+    {
+        if($model->save())
+        {
+           return ($returnInstance) ? $model : true;
+        }
+        throw new \Exception('Model not stored in database');
+    }
 
 
     public function runValidationLogic($credentialsOrAttributes = [])
@@ -171,10 +179,7 @@ abstract class BaseInternalService {
         return '';
     }
 
-    public function storeEloquentModel(Model $model)
-    {
 
-    }
 
 
 
