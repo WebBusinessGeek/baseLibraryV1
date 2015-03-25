@@ -1,5 +1,32 @@
 <?php
 
+
+$app = new Illuminate\Foundation\Application;
+
+$env = $app->detectEnvironment(array(
+
+	'local' => array('homestead'),
+	'localMachine' => array('Kevs-MacBook-Air.local'),
+
+));
+
+
+if($env == 'localMachine')
+{
+	$host = '127.0.0.1';
+	$username = 'homestead';
+	$password = 'secret';
+	$port = '33060';
+}
+else
+{
+	$host = 'localhost';
+	$username = 'homestead';
+	$password = 'secret';
+	$port = '33060';
+}
+
+
 return array(
 
 	/*
@@ -54,13 +81,14 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'forge',
-			'username'  => 'forge',
-			'password'  => '',
+			'host'      =>  $host,
+			'database'  => 'baseLibrary',
+			'username'  => $username,
+			'password'  => $password,
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
+			'port' 		=> $port
 		),
 
 		'pgsql' => array(

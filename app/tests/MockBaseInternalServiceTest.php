@@ -214,7 +214,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
 
-   /* public function test_storeEloquentModel_method_returns_model_if_returnInstance_true()
+    public function test_storeEloquentModel_method_returns_model_if_returnInstance_true()
     {
         $attributes = [
             'attribute1' => 'value1',
@@ -227,7 +227,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
         $newModelWithAttributes = $internalService->addAttributesToNewModel($attributes);
 
-        $storeResponse = $internalService->storeEloquentModel($newModelWithAttributes, false);
+        $storeResponse = $internalService->storeEloquentModel($newModelWithAttributes);
 
         $this->assertTrue(is_object($storeResponse));
     }
@@ -249,5 +249,5 @@ class MockBaseInternalServiceTest extends \TestCase {
         $storeResponse = $internalService->storeEloquentModel($newModelWithAttributes, false);
 
         $this->assertTrue($storeResponse);
-    }*/
+    }
 }
