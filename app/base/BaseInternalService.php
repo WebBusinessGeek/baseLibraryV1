@@ -149,8 +149,12 @@ abstract class BaseInternalService {
     }
 
 
-
-
+    /**Stores model in database.
+     * @param Model $model
+     * @param bool $returnInstance
+     * @return bool|Model
+     * @throws \Exception
+     */
     public function storeEloquentModel(Model $model, $returnInstance = true)
     {
         if($model->save())

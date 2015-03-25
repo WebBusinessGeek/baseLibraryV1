@@ -214,6 +214,9 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_storeEloquentModel_method_returns_model_if_returnInstance_true()
     {
         $attributes = [
@@ -233,6 +236,9 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_storeEloquentModel_method_returns_boolean_if_returnInstance_set_to_false()
     {
         $attributes = [

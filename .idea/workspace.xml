@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3488430f-fbf7-4678-bf2a-dc854a3d647e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/BaseInternalService.php" afterPath="$PROJECT_DIR$/app/base/BaseInternalService.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" afterPath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/MockBaseModel.php" afterPath="$PROJECT_DIR$/app/base/MockBaseModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/database.php" afterPath="$PROJECT_DIR$/app/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/local/database.php" afterPath="$PROJECT_DIR$/app/config/local/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="baseLibrary.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,18 +27,36 @@
     <favorites_list name="baseLibrary" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="MockBaseInternalServiceTest.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5755396" vertical-offset="5200" max-vertical-offset="6300">
-              <caret line="231" column="53" selection-start-line="231" selection-start-column="53" selection-end-line="231" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="MockBaseInternalServiceTest.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-0.63622755" vertical-offset="5675" max-vertical-offset="6450">
+                  <caret line="217" column="38" selection-start-line="217" selection-start-column="38" selection-end-line="217" selection-end-column="38" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="BaseInternalService.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.352518" vertical-offset="3405" max-vertical-offset="5375">
+                  <caret line="151" column="32" selection-start-line="151" selection-start-column="32" selection-end-line="151" selection-end-column="32" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -323,14 +338,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48281017" vertical-offset="35777" max-vertical-offset="78350">
           <caret line="1464" column="15" selection-start-line="1464" selection-start-column="15" selection-end-line="1464" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74820143" vertical-offset="3430" max-vertical-offset="5275">
-          <caret line="163" column="47" selection-start-line="163" selection-start-column="47" selection-end-line="163" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -3245,10 +3252,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.352518" vertical-offset="3405" max-vertical-offset="5375">
+          <caret line="151" column="32" selection-start-line="151" selection-start-column="32" selection-end-line="151" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5755396" vertical-offset="5200" max-vertical-offset="6300">
-          <caret line="231" column="53" selection-start-line="231" selection-start-column="53" selection-end-line="231" selection-end-column="53" />
+        <state vertical-scroll-proportion="-0.63622755" vertical-offset="5675" max-vertical-offset="6450">
+          <caret line="217" column="38" selection-start-line="217" selection-start-column="38" selection-end-line="217" selection-end-column="38" />
           <folding />
         </state>
       </provider>
