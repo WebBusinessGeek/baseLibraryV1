@@ -124,12 +124,41 @@ class MockBaseInternalServiceTest extends \TestCase {
 
     public function test_updateAttributesOnExistingModel_method_returns_model()
     {
+        $attributes = [
+            'attribute1' => 'value1',
+            'attribute2' => 'value2',
+            'attribute3' => 'value3',
+        ];
 
+        $mockBaseModel = new MockBaseModel();
+        $internalService = new MockBaseInternalService($mockBaseModel);
+
+        $modelInstance = $internalService->createNewModelInstance();
+
+        $updatedModelInstance = $internalService->updateAttributesOnExistingModel($modelInstance, $attributes);
+
+        $this->assertTrue(is_object($updatedModelInstance));
     }
 
     public function test_updateAttributesOnExistingModel_method_returns_model_with_correct_attributes()
     {
+        $attributes = [
+            'attribute1' => 'value1',
+            'attribute2' => 'value2',
+            'attribute3' => 'value3',
+        ];
 
+        $mockBaseModel = new MockBaseModel();
+        $internalService = new MockBaseInternalService($mockBaseModel);
+
+        $modelInstance = $internalService->createNewModelInstance();
+
+        $updatedModelInstance = $internalService->updateAttributesOnExistingModel($modelInstance, $attributes);
+
+        foreach($attributes as $attributeName => $attributeValue)
+        {
+            $this->assertEquals($attributeValue, $updatedModelInstance->$attributeName);
+        }
     }
 
     public function test_addAttributesToNewModel_method_returns_a_model()

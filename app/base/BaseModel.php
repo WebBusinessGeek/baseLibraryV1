@@ -102,6 +102,11 @@ abstract class BaseModel extends Model{
     }
 
 
+    /**Updates the model instance with the attributes passed.
+     * Returns the model instance after the update.
+     * @param array $newAttributes
+     * @return $this
+     */
     public function updateSelfAttributes($newAttributes = [])
     {
         foreach($newAttributes as $attributeName => $attributeValue)
