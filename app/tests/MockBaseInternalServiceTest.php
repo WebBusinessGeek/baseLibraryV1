@@ -12,6 +12,7 @@ namespace tests;
 use Base\MockBaseInternalService as MockBaseInternalService;
 use Base\MockBaseModel;
 use Base\MockBaseModelWithoutAttributes;
+use Illuminate\Support\Facades\DB;
 
 class MockBaseInternalServiceTest extends \TestCase {
 
@@ -233,6 +234,8 @@ class MockBaseInternalServiceTest extends \TestCase {
         $storeResponse = $internalService->storeEloquentModel($newModelWithAttributes);
 
         $this->assertTrue(is_object($storeResponse));
+
+        $storeResponse->delete();
     }
 
 
@@ -255,5 +258,7 @@ class MockBaseInternalServiceTest extends \TestCase {
         $storeResponse = $internalService->storeEloquentModel($newModelWithAttributes, false);
 
         $this->assertTrue($storeResponse);
+
+        DB::table('mockBaseModels')->truncate();
     }
 }
