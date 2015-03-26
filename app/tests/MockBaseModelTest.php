@@ -97,25 +97,73 @@ class MockBaseModelTest extends \TestCase {
 
 
 
-
+    /**
+     *@group baseModelTests
+     */
     public function test_isValidOptionForSelfAttributes_returns_true_if_valid_option_for_self_attributes_is_submitted()
     {
+        $validOption = 'name';
 
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->isValidOptionForSelfAttributes($validOption);
+
+        $this->assertTrue($response);
     }
 
+    /**
+     *@group baseModelTests
+     */
     public function test_isValidOptionForSelfAttributes_returns_false_if_invalid_option_for_self_attributes_is_submitted()
     {
+        $invalidOption = 'badOption';
 
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->isValidOptionForSelfAttributes($invalidOption);
+
+        $this->assertFalse($response);
     }
 
+    /**
+     *@group baseModelTests
+     */
     public function test_isValidValueForSelfAttributeOption_returns_true_if_valid_value_for_self_attributes_option_was_submitted()
     {
+        $validValue = 'email';
+        $validOption = 'format';
 
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->isValidValueForSelfAttributeOption($validOption, $validValue);
+
+        $this->assertTrue($response);
     }
 
+    /**
+     *@group baseModelTests
+     */
     public function test_isValidValueForSelfAttributeOption_returns_false_if_invalid_value_for_self_attributes_option_was_submitted()
     {
+        $invalidValue = 'badValue';
+        $validOption = 'format';
 
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->isValidValueForSelfAttributeOption($validOption, $invalidValue);
+
+        $this->assertfalse($response);
+    }
+
+
+    /**
+     *@group baseModelTests
+     */
+    public function test_isValidValueForSelfAttributeOption_throws_an_exception_if_option_does_not_have_configurable_values()
+    {
+        $validValue = 'email';
+        $invalidOption = 'badOption';
+
+        $mockBaseModel = new MockBaseModel();
+
+        $this->setExpectedException('Exception', 'Option: '.$invalidOption.' may not exist or not have configurable options.');
+        $mockBaseModel->isValidValueForSelfAttributeOption($invalidOption, $validValue);
     }
 
     public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_returns_names_of_selfAttributes_where_Option_and_value_match()

@@ -17,6 +17,28 @@ abstract class BaseModel extends Model{
 
     protected $multiOwnerClassNames = [];
 
+    protected $validAttributeOptions = [
+        'name','format','nullable','unique','exists','identifier','key','enumValues'
+    ];
+
+    protected $validAttributeValues = [
+        'format' => [
+            'email', 'phoneNumber','url','password','string','exists','enum',
+            'text','id','token','ipAddress','date'
+        ],
+        'nullable' => [
+            true, false
+        ],
+        'unique' => [
+            true, false
+        ],
+        'identifier' => [
+            true, false
+        ],
+        'key' => [
+            true, false
+        ]
+    ];
     protected $modelAttributes = [
         //		START AT ZERO (0)!!! => [
         //
@@ -122,6 +144,8 @@ abstract class BaseModel extends Model{
         $attributeNamesThatRequireStringFormatting = $this->getNamesOfSelfAttributesWhereOptionAndValueMatchThis('format', 'string');
 
         //determine if all values are valid strings
+        $attributesToBeCheckedForStringValidation = $this->pullAttributesByName($attributesToCheck,$attributeNamesThatRequireStringFormatting);
+
 
         //return true if all are valid
 
@@ -136,7 +160,7 @@ abstract class BaseModel extends Model{
         {
             throw new \Exception($option .' Is invalid option for Model Attributes');
         }
-        elseif(!$this->isValidValueForSelfAttributeOption($option, $value))
+        elseif(!$this->isValidValueForSelfAttributeOption($option, $value) == true)
         {
             throw new \Exception($value .' Is invalid value for Model Attribute Option: '. $option);
         }
@@ -154,13 +178,30 @@ abstract class BaseModel extends Model{
         return $namesOfAttributesThatMatch;
     }
 
+    /**Determines if passed in argument is a valid attribute option for model.
+     * Returns TRUE on pass, FALSE on fail.
+     * @param $option
+     * @return bool
+     */
     public function isValidOptionForSelfAttributes($option)
     {
-
+        return in_array($option, $this->validAttributeOptions);
     }
+
+    /**Determines if passed $value is a valid option for passed $option.
+     * Returns TRUE on pass, FALSE on fail, and THROWS EXCEPTION if $option is invalid. 
+     * @param $option
+     * @param $value
+     * @return bool
+     * @throws \Exception
+     */
     public function isValidValueForSelfAttributeOption($option, $value)
     {
-
+        if(!isset($this->validAttributeValues[$option]))
+        {
+            throw new \Exception('Option: '. $option .' may not exist or not have configurable options.');
+        }
+        return in_array($value, $this->validAttributeValues[$option]);
     }
 
 
