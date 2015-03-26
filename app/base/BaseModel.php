@@ -177,7 +177,7 @@ abstract class BaseModel extends Model{
         }
         if(!count($namesOfAttributesThatMatch) > 0)
         {
-            throw new \Exception('No attributes have that value for that option');
+            throw new \Exception('No attributes on the Model have '. $value . ' as value for Model Attribute Option: ' .$option);
         }
         return $namesOfAttributesThatMatch;
     }

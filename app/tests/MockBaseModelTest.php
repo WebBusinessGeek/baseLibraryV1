@@ -211,15 +211,19 @@ class MockBaseModelTest extends \TestCase {
         $mockBaseModel->getNamesOfSelfAttributesWhereOptionAndValueMatchThis($validOption, $invalidValue);
     }
 
-    
+
+    /**
+     *@group baseModelTests
+     */
     public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_throws_exception_if_no_results()
     {
-        //valid option
-        //valid value - where you know NO chance of attribute being place on model with this value
+        $validOption = 'format';
+        $validValueButNotPresent = 'token';
 
-        //expect exception
+        $this->setExpectedException('Exception', 'No attributes on the Model have '. $validValueButNotPresent.' as value for Model Attribute Option: '. $validOption);
 
-        //call method
+        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel->getNamesOfSelfAttributesWhereOptionAndValueMatchThis($validOption, $validValueButNotPresent);
     }
 
     public function test_stringAttributesAreValid_method_returns_false_if_invalid_strings_are_submitted_as_attributes()
