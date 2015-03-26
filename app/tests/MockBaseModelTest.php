@@ -168,22 +168,42 @@ class MockBaseModelTest extends \TestCase {
 
     public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_returns_array_of_names_where_Option_and_value_match()
     {
+        //valid option
+        //valid value
 
+        //call method
+
+        //assert is_array is true
     }
 
     public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_throws_exception_if_option_is_invalid()
     {
+        //invalid option
+        //valid value
 
+        //expect exception
+
+        //call method
     }
 
     public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_throws_exception_if_value_is_invalid()
     {
+        //valid option
+        //invalid value
 
+        //expect exception
+
+        //call method
     }
 
     public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_throws_exception_if_no_results()
     {
+        //valid option
+        //valid value - where you know NO chance of attribute being place on model with this value
 
+        //expect exception
+
+        //call method
     }
 
     public function test_stringAttributesAreValid_method_returns_false_if_invalid_strings_are_submitted_as_attributes()
