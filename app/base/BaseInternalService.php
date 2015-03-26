@@ -213,6 +213,29 @@ abstract class BaseInternalService {
 
 
 
+    public function stringAttributesAreValid($attributesToCheck)
+    {
+        //get all attributes that have 'string' as value for 'format'
+            //should be returned as: 'attributeName' => 'attributeValue'
+
+        //determine if all values are valid strings
+
+        //return true if all are valid
+
+        //return false if not
+    }
+
+    public function getModelAttributesWithThisFormat($formatValue)
+    {
+        //determine if $formatValue is a valid format option
+
+        //if not throw error
+
+        //if so get the 'attributeName' => 'attributeValue' pairs that have the $formatValue
+
+        //return them
+    }
+
 
 
     public function show()
