@@ -261,4 +261,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
         DB::table('mockBaseModels')->truncate();
     }
+
+
+
 }

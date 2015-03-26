@@ -35,33 +35,37 @@ abstract class BaseInternalService {
         $validationLogicResponse = $this->runValidationLogicHook($credentialsOrAttributes);
         $attributesAcceptedResponse = $this->checkModelAcceptsAttributes($credentialsOrAttributes);
 
-        if($validationLogicResponse == false)
+        if($validationLogicResponse === false)
         {
             return $this->sendMessage('Attributes failed validation.');
         }
-        elseif($attributesAcceptedResponse == false)
+        elseif($attributesAcceptedResponse === false)
         {
             return $this->sendMessage('Attributes are not accepted by model.');
         }
 
         $manipulatedAttributes = $this->runPREandPOSTHooksAndReturnManipulatedAttributes($credentialsOrAttributes);
 
+        if(!is_array($manipulatedAttributes))
+        {
+            throw new \Exception('Array not returned from the runAttributeManipulationLogic method.');
+        }
+
         $newModel = $this->addAttributesToNewModel($manipulatedAttributes);
-        $storeResponse = $this->storeEloquentModel($newModel);
-        return $storeResponse;
+        return $this->storeEloquentModel($newModel);
     }
 
+
+    /**Allows child descendant to HOOK into a script to run custom validation logic.
+     * Returns false at this level to enforce a valid implementation on the child.
+     * @param array $credentialsOrAttributes
+     * @return bool
+     */
     public function runValidationLogicHook($credentialsOrAttributes = [])
     {
-        return $this->runGeneralValidationLogic($credentialsOrAttributes);
+        return false;
     }
 
-    public function runGeneralValidationLogic($attributesToValidate = [])
-    {
-        //format validator
-
-        return'';
-    }
 
     /**Returns the model's modelAttributes property as a multiDimensional array.
      * @return mixed
@@ -158,24 +162,51 @@ abstract class BaseInternalService {
     }
 
 
+    /**HOOK group to all child descendant to HOOK into the script.
+     * All methods are HOOK method that allow the child to override functionality at various stages.
+     * Please review each method's documentation separately for more information.
+     * @param array $credentialsOrAttributes
+     * @return array
+     */
     public function runPREandPOSTHooksAndReturnManipulatedAttributes($credentialsOrAttributes = [])
     {
         $this->runPREAttributeManipulationLogic();
         $manipulatedAttributes = $this->runAttributeManipulationLogic($credentialsOrAttributes);
-        $this->runPOSTAttributeManipulationLogic();
+        $this->runPOSTAttributeManipulationLogic($credentialsOrAttributes, $manipulatedAttributes);
         return $manipulatedAttributes;
     }
 
 
+    /**Allows child descendant to HOOK into script.
+     * The purpose is to allow the child to run any logic BEFORE attributes are added to the model.
+     * Will return NULL at this level.
+     * @return string
+     */
     public function runPREAttributeManipulationLogic()
     {
         return;
     }
+
+
+    /**Allows child descendant to HOOK into script.
+     * The purpose is to allow the child to perform any logic that will MANIPULATE the attributes.
+     * This MANIPULATION will happen before the attributes are added to the model.
+     * Will return the attributes as is at this level.
+     * @param array $credentialsOrAttributes
+     * @return array
+     */
     public function runAttributeManipulationLogic($credentialsOrAttributes = [])
     {
         return $credentialsOrAttributes;
     }
-    public function runPOSTAttributeManipulationLogic()
+
+
+    /**Allows child descendant to HOOK into script.
+     * This allows the child to perform any logic that should run AFTER the attributes are manipulated.
+     * The function will have both the MANIPULATED and ORIGINAL attribute groups available for use in any logic.
+     * Method should NOT return any value at any level (parent or child).
+     */
+    public function runPOSTAttributeManipulationLogic($originalAttributes = [], $manipulatedAttributes = [])
     {
         return;
     }
