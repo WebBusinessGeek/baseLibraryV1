@@ -263,5 +263,25 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
 
+    public function test_store_method_sends_error_message_if_attributes_fail_child_implemented_validation()
+    {
 
+    }
+
+    public function test_store_method_sends_error_message_if_attributes_are_not_accepted_by_model()
+    {
+
+    }
+
+    public function test_store_method_sends_error_message_if_array_is_not_returned_from_runAttributeManipulationLogic_method()
+    {
+
+    }
+
+    public function test_store_method_returns_new_model_on_success()
+    {
+
+    }
+
+    
 }
