@@ -166,12 +166,22 @@ class MockBaseModelTest extends \TestCase {
         $mockBaseModel->isValidValueForSelfAttributeOption($invalidOption, $validValue);
     }
 
-    public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_returns_names_of_selfAttributes_where_Option_and_value_match()
+    public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_returns_array_of_names_where_Option_and_value_match()
     {
 
     }
 
-    public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_returns_error_message_if_option_and_value_dont_match()
+    public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_throws_exception_if_option_is_invalid()
+    {
+
+    }
+
+    public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_throws_exception_if_value_is_invalid()
+    {
+
+    }
+
+    public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_throws_exception_if_no_results()
     {
 
     }

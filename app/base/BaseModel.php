@@ -158,11 +158,11 @@ abstract class BaseModel extends Model{
     {
         if(!$this->isValidOptionForSelfAttributes($option))
         {
-            throw new \Exception($option .' Is invalid option for Model Attributes');
+            throw new \Exception($option .' - is an invalid option for Model Attributes');
         }
         elseif(!$this->isValidValueForSelfAttributeOption($option, $value) == true)
         {
-            throw new \Exception($value .' Is invalid value for Model Attribute Option: '. $option);
+            throw new \Exception($value .' - is an invalid value for Model Attribute Option: '. $option);
         }
 
         $namesOfAttributesThatMatch = [];
@@ -174,6 +174,10 @@ abstract class BaseModel extends Model{
             {
                 array_push($attributesThatMatch, $attribute['name']);
             }
+        }
+        if(!count($namesOfAttributesThatMatch) > 0)
+        {
+            throw new \Exception('No attributes have that value for that option');
         }
         return $namesOfAttributesThatMatch;
     }
@@ -189,7 +193,7 @@ abstract class BaseModel extends Model{
     }
 
     /**Determines if passed $value is a valid option for passed $option.
-     * Returns TRUE on pass, FALSE on fail, and THROWS EXCEPTION if $option is invalid. 
+     * Returns TRUE on pass, FALSE on fail, and THROWS EXCEPTION if $option is invalid.
      * @param $option
      * @param $value
      * @return bool
