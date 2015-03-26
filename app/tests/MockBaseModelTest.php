@@ -196,16 +196,22 @@ class MockBaseModelTest extends \TestCase {
         $mockBaseModel->getNamesOfSelfAttributesWhereOptionAndValueMatchThis($invalidOption, $validValue);
     }
 
+    /**
+     *@group baseModelTests
+     */
     public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_throws_exception_if_value_is_invalid()
     {
-        //valid option
-        //invalid value
+        $validOption = 'format';
 
-        //expect exception
+        $invalidValue = 'badValue';
 
-        //call method
+        $this->setExpectedException('Exception', $invalidValue. ' - is an invalid value for Model Attribute Option: ' . $validOption);
+
+        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel->getNamesOfSelfAttributesWhereOptionAndValueMatchThis($validOption, $invalidValue);
     }
 
+    
     public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_throws_exception_if_no_results()
     {
         //valid option
