@@ -283,5 +283,5 @@ class MockBaseInternalServiceTest extends \TestCase {
 
     }
 
-    
+
 }

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3488430f-fbf7-4678-bf2a-dc854a3d647e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/MockBaseInternalService.php" afterPath="$PROJECT_DIR$/app/base/MockBaseInternalService.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" afterPath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" />
     </list>
     <ignored path="baseLibrary.iws" />
@@ -26,14 +27,14 @@
     <favorites_list name="baseLibrary" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.8120196">
       <split-first>
         <leaf>
-          <file leaf-file-name="BaseInternalService.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
+          <file leaf-file-name="MockBaseInternalService.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/base/MockBaseInternalService.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="2.3669064" vertical-offset="3380" max-vertical-offset="6075">
-                  <caret line="206" column="72" selection-start-line="206" selection-start-column="72" selection-end-line="206" selection-end-column="72" />
+                <state vertical-scroll-proportion="0.8877246" vertical-offset="332" max-vertical-offset="1175">
+                  <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -46,8 +47,8 @@
           <file leaf-file-name="MockBaseInternalServiceTest.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.0359712" vertical-offset="6205" max-vertical-offset="7125">
-                  <caret line="285" column="4" selection-start-line="285" selection-start-column="4" selection-end-line="285" selection-end-column="4" />
+                <state vertical-scroll-proportion="0.92805755" vertical-offset="6280" max-vertical-offset="7125">
+                  <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -147,7 +148,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="50" width="1431" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -397,31 +398,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/base/MockBaseInternalService.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50359714" vertical-offset="0" max-vertical-offset="695">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding>
-            <marker date="1427380530000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1427380530000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427380530000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427380530000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+        <state vertical-scroll-proportion="0.92805755" vertical-offset="6280" max-vertical-offset="7125">
+          <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.3669064" vertical-offset="3380" max-vertical-offset="6075">
-          <caret line="206" column="72" selection-start-line="206" selection-start-column="72" selection-end-line="206" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.5755396" vertical-offset="3925" max-vertical-offset="6075">
+          <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
+    <entry file="file://$PROJECT_DIR$/app/base/MockBaseInternalService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0359712" vertical-offset="6205" max-vertical-offset="7125">
-          <caret line="285" column="4" selection-start-line="285" selection-start-column="4" selection-end-line="285" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.8877246" vertical-offset="332" max-vertical-offset="1175">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>

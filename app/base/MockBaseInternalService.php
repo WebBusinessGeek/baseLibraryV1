@@ -23,4 +23,25 @@ class MockBaseInternalService extends BaseInternalService {
     }
 
 
+    public function runValidationLogicHook($credentialsOrAttributes = [])
+    {
+
+    }
+
+    public function runPREAttributeManipulationLogic()
+    {
+
+    }
+
+    public function runAttributeManipulationLogic($credentialsOrAttributes = [])
+    {
+
+    }
+
+    public function runPOSTAttributeManipulationLogic($originalAttributes = [], $manipulatedAttributes = [])
+    {
+
+    }
+
+
 }
