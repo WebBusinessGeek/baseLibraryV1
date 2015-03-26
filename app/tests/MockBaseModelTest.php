@@ -94,4 +94,37 @@ class MockBaseModelTest extends \TestCase {
         }
 
     }
+
+
+
+
+    public function test_isValidOptionForSelfAttributes_returns_true_if_valid_option_for_self_attributes_is_submitted()
+    {
+
+    }
+
+    public function test_isValidOptionForSelfAttributes_returns_false_if_invalid_option_for_self_attributes_is_submitted()
+    {
+
+    }
+
+    public function test_isValidValueForSelfAttributeOption_returns_true_if_valid_value_for_self_attributes_option_was_submitted()
+    {
+
+    }
+
+    public function test_isValidValueForSelfAttributeOption_returns_false_if_invalid_value_for_self_attributes_option_was_submitted()
+    {
+
+    }
+
+    public function test_stringAttributesAreValid_method_returns_false_if_invalid_strings_are_submitted_as_attributes()
+    {
+
+    }
+
+    public function test_stringsAttributesAreValid_method_returns_true_if_valid_strings_are_submitted_as_attributes()
+    {
+
+    }
 }

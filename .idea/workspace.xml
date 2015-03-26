@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3488430f-fbf7-4678-bf2a-dc854a3d647e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/BaseInternalService.php" afterPath="$PROJECT_DIR$/app/base/BaseInternalService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/MockBaseInternalService.php" afterPath="$PROJECT_DIR$/app/base/MockBaseInternalService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/BaseModel.php" afterPath="$PROJECT_DIR$/app/base/BaseModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/MockBaseModel.php" afterPath="$PROJECT_DIR$/app/base/MockBaseModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/MockBaseModelTest.php" afterPath="$PROJECT_DIR$/app/tests/MockBaseModelTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="baseLibrary.iws" />
@@ -28,14 +31,14 @@
     <favorites_list name="baseLibrary" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5303983">
+    <splitter split-orientation="horizontal" split-proportion="0.5401817">
       <split-first>
         <leaf>
-          <file leaf-file-name="MockBaseInternalService.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/base/MockBaseInternalService.php">
+          <file leaf-file-name="BaseModel.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/base/BaseModel.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.58832335" vertical-offset="232" max-vertical-offset="1200">
-                  <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.73802394" vertical-offset="3382" max-vertical-offset="4525">
+                  <caret line="160" column="64" selection-start-line="160" selection-start-column="64" selection-end-line="160" selection-end-column="64" />
                   <folding />
                 </state>
               </provider>
@@ -45,11 +48,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="BaseInternalService.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
+          <file leaf-file-name="MockBaseModelTest.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/tests/MockBaseModelTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6115108" vertical-offset="5325" max-vertical-offset="6650">
-                  <caret line="235" column="21" selection-start-line="235" selection-start-column="21" selection-end-line="235" selection-end-column="21" />
+                <state vertical-scroll-proportion="0.28057554" vertical-offset="2130" max-vertical-offset="3275">
+                  <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -121,15 +124,15 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -154,6 +157,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -163,13 +167,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -193,11 +196,120 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/base/MockBaseInternalService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="1200">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <marker date="1427384612000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427384612000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427384612000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427384612000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427384612000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427384612000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427384612000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427384612000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5150" max-vertical-offset="6650">
+          <caret line="235" column="21" selection-start-line="235" selection-start-column="21" selection-end-line="235" selection-end-column="21" />
+          <folding>
+            <marker date="1427391899000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns false at this level to enforce a valid implementation on the child. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns True if it does. False if not. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param $message ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the new model instance. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the updated model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param Model $model ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" All methods are HOOK method that allow the child to override functionality at various stages. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to run any logic BEFORE attributes are added to the model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to perform any logic that will MANIPULATE the attributes. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" This allows the child to perform any logic that should run AFTER the attributes are manipulated. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="775" max-vertical-offset="5300">
           <caret line="60" column="26" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
-          <folding />
+          <folding>
+            <marker date="1427391899000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns false at this level to enforce a valid implementation on the child. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns True if it does. False if not. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param $message ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the new model instance. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the updated model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param Model $model ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" All methods are HOOK method that allow the child to override functionality at various stages. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to run any logic BEFORE attributes are added to the model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to perform any logic that will MANIPULATE the attributes. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" This allows the child to perform any logic that should run AFTER the attributes are manipulated. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -205,53 +317,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5732" max-vertical-offset="6550">
           <caret line="263" column="1" selection-start-line="263" selection-start-column="1" selection-end-line="263" selection-end-column="1" />
-          <folding>
-            <marker date="1427383847000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1427383847000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -259,7 +324,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3405" max-vertical-offset="5375">
           <caret line="151" column="32" selection-start-line="151" selection-start-column="32" selection-end-line="151" selection-end-column="32" />
-          <folding />
+          <folding>
+            <marker date="1427391899000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns false at this level to enforce a valid implementation on the child. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns True if it does. False if not. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param $message ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the new model instance. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the updated model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param Model $model ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" All methods are HOOK method that allow the child to override functionality at various stages. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to run any logic BEFORE attributes are added to the model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to perform any logic that will MANIPULATE the attributes. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" This allows the child to perform any logic that should run AFTER the attributes are manipulated. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -267,7 +374,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3380" max-vertical-offset="5275">
           <caret line="186" column="5" selection-start-line="186" selection-start-column="5" selection-end-line="186" selection-end-column="5" />
-          <folding />
+          <folding>
+            <marker date="1427391899000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns false at this level to enforce a valid implementation on the child. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns True if it does. False if not. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param $message ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the new model instance. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the updated model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param Model $model ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" All methods are HOOK method that allow the child to override functionality at various stages. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to run any logic BEFORE attributes are added to the model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to perform any logic that will MANIPULATE the attributes. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" This allows the child to perform any logic that should run AFTER the attributes are manipulated. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -275,53 +424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5175" max-vertical-offset="6300">
           <caret line="216" column="5" selection-start-line="216" selection-start-column="3" selection-end-line="251" selection-end-column="7" />
-          <folding>
-            <marker date="1427383847000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1427383847000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -350,7 +452,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="3825">
           <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1427391899000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns false at this level to enforce a valid implementation on the child. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns True if it does. False if not. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param $message ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the new model instance. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the updated model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param Model $model ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" All methods are HOOK method that allow the child to override functionality at various stages. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to run any logic BEFORE attributes are added to the model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to perform any logic that will MANIPULATE the attributes. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" This allows the child to perform any logic that should run AFTER the attributes are manipulated. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -358,7 +502,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1450" max-vertical-offset="3725">
           <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
+          <folding>
+            <marker date="1427391899000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns false at this level to enforce a valid implementation on the child. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns True if it does. False if not. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param $message ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the new model instance. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the updated model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param Model $model ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" All methods are HOOK method that allow the child to override functionality at various stages. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to run any logic BEFORE attributes are added to the model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to perform any logic that will MANIPULATE the attributes. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" This allows the child to perform any logic that should run AFTER the attributes are manipulated. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -380,7 +566,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="3025">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding />
+          <folding>
+            <marker date="1427391899000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns false at this level to enforce a valid implementation on the child. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns True if it does. False if not. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param $message ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the new model instance. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the updated model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param Model $model ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" All methods are HOOK method that allow the child to override functionality at various stages. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to run any logic BEFORE attributes are added to the model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to perform any logic that will MANIPULATE the attributes. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" This allows the child to perform any logic that should run AFTER the attributes are manipulated. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -388,7 +616,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="2850">
           <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
-          <folding />
+          <folding>
+            <marker date="1427391899000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns false at this level to enforce a valid implementation on the child. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns True if it does. False if not. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param $message ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the new model instance. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the updated model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param Model $model ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" All methods are HOOK method that allow the child to override functionality at various stages. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to run any logic BEFORE attributes are added to the model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to perform any logic that will MANIPULATE the attributes. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" This allows the child to perform any logic that should run AFTER the attributes are manipulated. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -427,20 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32374102" vertical-offset="0" max-vertical-offset="695">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/MockBaseModelTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46043167" vertical-offset="1480" max-vertical-offset="2450">
-          <caret line="77" column="7" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48281017" vertical-offset="35777" max-vertical-offset="78350">
@@ -469,21 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/base/BaseModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74820143" vertical-offset="1980" max-vertical-offset="3400">
-          <caret line="105" column="51" selection-start-line="105" selection-start-column="51" selection-end-line="105" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/base/MockBaseModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7963989" vertical-offset="25" max-vertical-offset="2375">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2015_03_25_165104_create_mockBaseModels_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.82733816" vertical-offset="125" max-vertical-offset="1025">
@@ -495,68 +736,110 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46043167" vertical-offset="6305" max-vertical-offset="7125">
           <caret line="273" column="5" selection-start-line="273" selection-start-column="5" selection-end-line="273" selection-end-column="5" />
-          <folding>
-            <marker date="1427383847000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1427383847000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="@group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder=" @group mockInternalServiceTests ..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1427383847000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/base/MockBaseInternalService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58832335" vertical-offset="232" max-vertical-offset="1200">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.64748204" vertical-offset="0" max-vertical-offset="1200">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <marker date="1427384612000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427384612000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427384612000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427384612000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427384612000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427384612000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427384612000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427384612000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/base/MockBaseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5683453" vertical-offset="1455" max-vertical-offset="2925">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35971224" vertical-offset="0" max-vertical-offset="695">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1427391689000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1427391689000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427391689000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6115108" vertical-offset="5325" max-vertical-offset="6650">
-          <caret line="235" column="21" selection-start-line="235" selection-start-column="21" selection-end-line="235" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.32374102" vertical-offset="5175" max-vertical-offset="6175">
+          <caret line="221" column="14" selection-start-line="221" selection-start-column="14" selection-end-line="221" selection-end-column="14" />
+          <folding>
+            <marker date="1427391899000" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns false at this level to enforce a valid implementation on the child. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns True if it does. False if not. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param $message ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the new model instance. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @return mixed ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" Returns the updated model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" @param Model $model ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" All methods are HOOK method that allow the child to override functionality at various stages. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to run any logic BEFORE attributes are added to the model. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" The purpose is to allow the child to perform any logic that will MANIPULATE the attributes. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder=" This allows the child to perform any logic that should run AFTER the attributes are manipulated. ..." />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427391899000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tests/MockBaseModelTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28057554" vertical-offset="2130" max-vertical-offset="3275">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/base/BaseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73802394" vertical-offset="3382" max-vertical-offset="4525">
+          <caret line="160" column="64" selection-start-line="160" selection-start-column="64" selection-end-line="160" selection-end-column="64" />
           <folding />
         </state>
       </provider>

@@ -117,6 +117,51 @@ abstract class BaseModel extends Model{
     }
 
 
+    public function stringAttributesAreValid($attributesToCheck)
+    {
+        $attributeNamesThatRequireStringFormatting = $this->getNamesOfSelfAttributesWhereOptionAndValueMatchThis('format', 'string');
+
+        //determine if all values are valid strings
+
+        //return true if all are valid
+
+        //return false if not
+    }
+
+
+
+    public function getNamesOfSelfAttributesWhereOptionAndValueMatchThis($option, $value)
+    {
+        if(!$this->isValidOptionForSelfAttributes($option))
+        {
+            throw new \Exception($option .' Is invalid option for Model Attributes');
+        }
+        elseif(!$this->isValidValueForSelfAttributeOption($option, $value))
+        {
+            throw new \Exception($value .' Is invalid value for Model Attribute Option: '. $option);
+        }
+
+        $namesOfAttributesThatMatch = [];
+        $modelAttributes = $this->getSelfAttributes();
+
+        foreach($modelAttributes as $attribute)
+        {
+            if($attribute[$option] == $value)
+            {
+                array_push($attributesThatMatch, $attribute['name']);
+            }
+        }
+        return $namesOfAttributesThatMatch;
+    }
+
+    public function isValidOptionForSelfAttributes($option)
+    {
+
+    }
+    public function isValidValueForSelfAttributeOption($option, $value)
+    {
+
+    }
 
 
     public function getSelfPrimaryOwnerClassName()

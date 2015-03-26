@@ -64,7 +64,7 @@ class MockBaseModel extends BaseModel {
 
             'nullable' => false,
 
-            'unique' => true,
+            'unique' => false,
 
             'exists' => null,
 
@@ -78,6 +78,23 @@ class MockBaseModel extends BaseModel {
             'name' => 'attribute3',
 
             'format' => 'string',
+
+            'nullable' => true,
+
+            'unique' => true,
+
+            'exists' => null,
+
+            'identifier' => false,
+
+            'key' => false,
+        ],
+
+        3 => [
+
+            'name' => 'attribute4',
+
+            'format' => 'email',
 
             'nullable' => false,
 
