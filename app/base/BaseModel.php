@@ -172,7 +172,7 @@ abstract class BaseModel extends Model{
         {
             if($attribute[$option] == $value)
             {
-                array_push($attributesThatMatch, $attribute['name']);
+                array_push($namesOfAttributesThatMatch, $attribute['name']);
             }
         }
         if(!count($namesOfAttributesThatMatch) > 0)
