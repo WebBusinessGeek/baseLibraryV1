@@ -118,6 +118,16 @@ class MockBaseModelTest extends \TestCase {
 
     }
 
+    public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_returns_names_of_selfAttributes_where_Option_and_value_match()
+    {
+
+    }
+
+    public function test_getNamesOfSelfAttributesWhereOptionAndValueMatchThis_returns_error_message_if_option_and_value_dont_match()
+    {
+
+    }
+
     public function test_stringAttributesAreValid_method_returns_false_if_invalid_strings_are_submitted_as_attributes()
     {
 
@@ -127,4 +137,6 @@ class MockBaseModelTest extends \TestCase {
     {
 
     }
+
+
 }
