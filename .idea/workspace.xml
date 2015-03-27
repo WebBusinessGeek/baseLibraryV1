@@ -32,8 +32,8 @@
           <file leaf-file-name="BaseModel.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/base/BaseModel.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6115108" vertical-offset="5025" max-vertical-offset="7900">
-                  <caret line="223" column="9" selection-start-line="223" selection-start-column="9" selection-end-line="223" selection-end-column="9" />
+                <state vertical-scroll-proportion="0.21582733" vertical-offset="5125" max-vertical-offset="7925">
+                  <caret line="216" column="96" selection-start-line="216" selection-start-column="96" selection-end-line="216" selection-end-column="96" />
                   <folding />
                 </state>
               </provider>
@@ -552,8 +552,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/base/BaseModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6115108" vertical-offset="5025" max-vertical-offset="7900">
-          <caret line="223" column="9" selection-start-line="223" selection-start-column="9" selection-end-line="223" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.21582733" vertical-offset="5125" max-vertical-offset="7925">
+          <caret line="216" column="96" selection-start-line="216" selection-start-column="96" selection-end-line="216" selection-end-column="96" />
           <folding />
         </state>
       </provider>

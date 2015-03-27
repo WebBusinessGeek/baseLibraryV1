@@ -214,6 +214,7 @@ abstract class BaseModel extends Model{
     /**Checks if invalid Characters are present in string.
      * Returns TRUE if invalid characters are detected.
      * Returns FALSE if NO invalid characters are detected.
+     * Returns TRUE if MODEL has NULL set on the $invalidCharactersForStringValidation property.
      * @param $stringToCheck
      * @return bool
      */
