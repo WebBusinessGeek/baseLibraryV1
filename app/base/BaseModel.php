@@ -141,11 +141,16 @@ abstract class BaseModel extends Model{
     }
 
 
-    public function stringAttributesAreValid($attributesToCheck)
+    public function checkIfStringAttributesAreValid($attributesToCheck)
     {
         $attributeNamesThatRequireStringFormatting = $this->getNamesOfSelfAttributesWhereOptionAndValueMatchThis('format', 'string');
 
         $valuesToBeCheckedForStringValidation = $this->getValuesFromAssociativeArrayWhereKeysMatch($attributesToCheck,$attributeNamesThatRequireStringFormatting);
+
+        if(!count($valuesToBeCheckedForStringValidation > 0))
+        {
+            return $noStringsToCheck = true;
+        }
 
         $invalidCounter = 0;
         foreach($valuesToBeCheckedForStringValidation as $attributeValue)

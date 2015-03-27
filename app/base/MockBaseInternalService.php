@@ -25,8 +25,8 @@ class MockBaseInternalService extends BaseInternalService {
 
     public function runValidationLogicHook($credentialsOrAttributes = [])
     {
-        $stringResponse = $this->stringsAttributesAreValid($credentialsOrAttributes);
-        return $stringResponse;
+        $stringValidationCheck = $this->model->checkIfStringAttributesAreValid($credentialsOrAttributes);
+        return $stringValidationCheck;
     }
 
     public function runPREAttributeManipulationLogic()
