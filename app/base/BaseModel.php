@@ -220,6 +220,10 @@ abstract class BaseModel extends Model{
     public function isInvalidCharactersPresentInString($stringToCheck)
     {
         $invalidCharacters = $this->getInvalidCharactersForStringValidation();
+        if(is_null($invalidCharacters))
+        {
+            return true;
+        }
         return (preg_match_all($invalidCharacters, $stringToCheck) > 0) ? :false;
     }
 

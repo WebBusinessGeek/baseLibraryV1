@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3488430f-fbf7-4678-bf2a-dc854a3d647e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/BaseInternalService.php" afterPath="$PROJECT_DIR$/app/base/BaseInternalService.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/BaseModel.php" afterPath="$PROJECT_DIR$/app/base/BaseModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/MockBaseModelTest.php" afterPath="$PROJECT_DIR$/app/tests/MockBaseModelTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="baseLibrary.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,8 +32,8 @@
           <file leaf-file-name="BaseModel.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/base/BaseModel.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.63741004" vertical-offset="3082" max-vertical-offset="7800">
-                  <caret line="146" column="68" selection-start-line="146" selection-start-column="68" selection-end-line="146" selection-end-column="68" />
+                <state vertical-scroll-proportion="0.6115108" vertical-offset="5025" max-vertical-offset="7900">
+                  <caret line="223" column="9" selection-start-line="223" selection-start-column="9" selection-end-line="223" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -49,7 +46,7 @@
           <file leaf-file-name="MockBaseModelTest.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/tests/MockBaseModelTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.352518" vertical-offset="9580" max-vertical-offset="10500">
+                <state vertical-scroll-proportion="0.64028776" vertical-offset="9380" max-vertical-offset="10500">
                   <caret line="398" column="0" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
                   <folding />
                 </state>
@@ -530,7 +527,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/MockBaseModelTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.352518" vertical-offset="9580" max-vertical-offset="10500">
+        <state vertical-scroll-proportion="0.64028776" vertical-offset="9380" max-vertical-offset="10500">
           <caret line="398" column="0" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
           <folding />
         </state>
@@ -555,8 +552,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/base/BaseModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63741004" vertical-offset="3082" max-vertical-offset="7800">
-          <caret line="146" column="68" selection-start-line="146" selection-start-column="68" selection-end-line="146" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.6115108" vertical-offset="5025" max-vertical-offset="7900">
+          <caret line="223" column="9" selection-start-line="223" selection-start-column="9" selection-end-line="223" selection-end-column="9" />
           <folding />
         </state>
       </provider>
