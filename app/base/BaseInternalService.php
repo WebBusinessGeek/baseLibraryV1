@@ -62,11 +62,12 @@ abstract class BaseInternalService {
 
         $storeModelResponse =  $this->storeEloquentModel($newModel);
 
-        if(!$this->isInstanceOfModel($storeModelResponse) || $storeModelResponse !== true)
+        if((is_object($storeModelResponse) && $this->isInstanceOfModel($storeModelResponse) == false) ||
+            (!is_object($storeModelResponse) && $storeModelResponse == false))
         {
-            throw new \Exception('Model not stored in database');
+            throw new \Exception('Model was not stored in database.');
         }
-
+        
         return $storeModelResponse;
     }
 
