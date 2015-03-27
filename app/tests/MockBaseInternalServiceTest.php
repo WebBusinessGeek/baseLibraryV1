@@ -263,6 +263,9 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_isInstanceOfModel_method_returns_false_if_model_passed_is_not_an_object()
     {
         $notAnObject = 'string';
@@ -275,7 +278,10 @@ class MockBaseInternalServiceTest extends \TestCase {
        $this->assertFalse($response);
     }
 
-    public function test_is_InstanceOfModel_method_returns_false_if_model_passed_is_not_instance_of_propertyModel()
+    /**
+     * @group mockInternalServiceTests
+     */
+    public function test_isInstanceOfModel_method_returns_false_if_model_passed_is_not_instance_of_propertyModel()
     {
         $notPropertyModel = new MockBaseModelWithoutAttributes();
 
@@ -287,6 +293,9 @@ class MockBaseInternalServiceTest extends \TestCase {
         $this->assertFalse($response);
     }
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_isInstanceOfModel_method_returns_true_if_model_passed_is_instance_of_propertyModel()
     {
         $mockBaseModel = new MockBaseModel();
