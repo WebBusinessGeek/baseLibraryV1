@@ -366,14 +366,53 @@ class MockBaseModelTest extends \TestCase {
     }
 
 
-    public function test_stringAttributesAreValid_method_returns_false_if_invalid_strings_are_submitted_as_attributes()
+    /**
+     *@group baseModelTests
+     */
+    public function test_checkIfStringAttributesAreValid_method_returns_false_if_any_invalid_string_attribute_values_are_found()
     {
+        $oneBadStringPresent = [
+            'attribute1' => 'goodString1',
+            'attribute2' => 'goodString2',
+            'attribute3' => 'badString$#$#$',
+        ];
 
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->checkIfStringAttributesAreValid($oneBadStringPresent);
+
+        $this->assertFalse($response);
     }
 
-    public function test_stringsAttributesAreValid_method_returns_true_if_valid_strings_are_submitted_as_attributes()
+    /**
+     *@group baseModelTests
+     */
+    public function test_checkIfStringAttributesAreValid_method_returns_true_if_all_string_attribute_values_are_valid()
     {
+        $noBadStringsPresent = [
+            'attribute1' => 'goodString1',
+            'attribute2' => 'goodString2',
+            'attribute3' => 'goodString3',
+        ];
 
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->checkIfStringAttributesAreValid($noBadStringsPresent);
+
+        $this->assertTrue($response);
+    }
+
+    /**
+     *@group baseModelTests
+     */
+    public function test_checkIfStringAttributesAreValid_method_returns_true_if_no_string_attribute_values_are_present()
+    {
+        $noStringsPresentAtAll = [
+            'attribute4' => null,
+        ];
+
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->checkIfStringAttributesAreValid($noStringsPresentAtAll);
+
+        $this->assertTrue($response);
     }
 
 

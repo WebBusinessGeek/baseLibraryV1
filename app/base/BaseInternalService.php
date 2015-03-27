@@ -32,17 +32,20 @@ abstract class BaseInternalService {
 
     public function store($credentialsOrAttributes = [])
     {
-        $validationLogicResponse = $this->runValidationLogicHook($credentialsOrAttributes);
         $attributesAcceptedResponse = $this->checkModelAcceptsAttributes($credentialsOrAttributes);
+
+        if($attributesAcceptedResponse === false)
+        {
+            return $this->sendMessage('Attributes are not accepted by model.');
+        }
+
+        $validationLogicResponse = $this->runValidationLogicHook($credentialsOrAttributes);
 
         if($validationLogicResponse === false)
         {
             return $this->sendMessage('Attributes failed validation.');
         }
-        elseif($attributesAcceptedResponse === false)
-        {
-            return $this->sendMessage('Attributes are not accepted by model.');
-        }
+
 
         $manipulatedAttributes = $this->runPREandPOSTHooksAndReturnManipulatedAttributes($credentialsOrAttributes);
 

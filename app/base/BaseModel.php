@@ -141,6 +141,14 @@ abstract class BaseModel extends Model{
     }
 
 
+    /**Checks if all string attribute values are valid.
+     * Returns TRUE if all string attributes are valid.
+     * Returns FALSE if any string attribute values are invalid.
+     * Returns TRUE if no string attribute values are passed at all.
+     * @param $attributesToCheck
+     * @return bool
+     * @throws \Exception
+     */
     public function checkIfStringAttributesAreValid($attributesToCheck)
     {
         $attributeNamesThatRequireStringFormatting = $this->getNamesOfSelfAttributesWhereOptionAndValueMatchThis('format', 'string');
@@ -160,7 +168,7 @@ abstract class BaseModel extends Model{
                 $invalidCounter++;
             }
         }
-       return ($invalidCounter < 0)? : false;
+       return ($invalidCounter === 0)? : false;
     }
 
 
