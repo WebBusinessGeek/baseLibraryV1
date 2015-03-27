@@ -296,6 +296,76 @@ class MockBaseModelTest extends \TestCase {
     }
 
 
+    /**
+     *@group baseModelTests
+     */
+    public function test_getValuesFromAssociativeArrayWhereKeysMatch_method_returns_all_values_where_keys_match()
+    {
+        $associativeArrayToTest = [
+            'key1' => 'value1',
+            'key2' => 'value2',
+            'key3' => 'value3',
+            'key4' => 'value4',
+            'key5' => 'value5'
+        ];
+
+        $keysToMatch = [
+            'key2','key3','key5','dummyKey'
+        ];
+
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->getValuesFromAssociativeArrayWhereKeysMatch($associativeArrayToTest, $keysToMatch);
+
+        $this->assertEquals(3, count($response));
+    }
+
+    /**
+     *@group baseModelTests
+     */
+    public function test_getValuesFromAssociativeArrayWhereKeysMatch_method_still_returns_array_if_no_keys_are_matched()
+    {
+        $associativeArrayToTest = [
+            'key1' => 'value1',
+            'key2' => 'value2',
+            'key3' => 'value3',
+            'key4' => 'value4',
+            'key5' => 'value5'
+        ];
+
+        $keysToMatch = [
+            'dummyKey2','dummyKey3','dummyKey5','dummyKey1'
+        ];
+
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->getValuesFromAssociativeArrayWhereKeysMatch($associativeArrayToTest, $keysToMatch);
+
+        $this->assertTrue(is_array($response));
+    }
+
+    /**
+     *@group baseModelTests
+     */
+    public function test_getValuesFromAssociativeArrayWhereKeysMatch_method_returns_an_empty_array_if_no_keys_are_matched()
+    {
+        $associativeArrayToTest = [
+            'key1' => 'value1',
+            'key2' => 'value2',
+            'key3' => 'value3',
+            'key4' => 'value4',
+            'key5' => 'value5'
+        ];
+
+        $keysToMatch = [
+            'dummyKey2','dummyKey3','dummyKey5','dummyKey1'
+        ];
+
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->getValuesFromAssociativeArrayWhereKeysMatch($associativeArrayToTest, $keysToMatch);
+
+        $this->assertEquals(0, count($response));
+    }
+
+
     public function test_stringAttributesAreValid_method_returns_false_if_invalid_strings_are_submitted_as_attributes()
     {
 

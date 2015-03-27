@@ -145,7 +145,7 @@ abstract class BaseModel extends Model{
     {
         $attributeNamesThatRequireStringFormatting = $this->getNamesOfSelfAttributesWhereOptionAndValueMatchThis('format', 'string');
 
-        $valuesToBeCheckedForStringValidation = $this->pullValueFromAssociativeArrayWhereKeysMatch($attributesToCheck,$attributeNamesThatRequireStringFormatting);
+        $valuesToBeCheckedForStringValidation = $this->getValuesFromAssociativeArrayWhereKeysMatch($attributesToCheck,$attributeNamesThatRequireStringFormatting);
 
         $invalidCounter = 0;
         foreach($valuesToBeCheckedForStringValidation as $attributeValue)
@@ -158,9 +158,26 @@ abstract class BaseModel extends Model{
        return ($invalidCounter < 0)? : false;
     }
 
-    public function pullValueFromAssociativeArrayWhereKeysMatch($associativeArrayToBeChecked = [], $keysToMatch = [])
-    {
 
+    /**Returns ALL values from an associative array where its key matches one of the $keysToMatch.
+     * Values returned as an array.
+     * If no values are returned the array will be empty.
+     * @param array $associativeArrayToBeChecked
+     * @param array $keysToMatch
+     * @return array
+     */
+    public function getValuesFromAssociativeArrayWhereKeysMatch($associativeArrayToBeChecked = [], $keysToMatch = [])
+    {
+        $valuesWhereKeysWereMatched = [];
+
+        foreach($associativeArrayToBeChecked as $keyToCheck => $valueToPushIfKeyMatches)
+        {
+            if(in_array($keyToCheck, $keysToMatch))
+            {
+                array_push($valuesWhereKeysWereMatched, $valueToPushIfKeyMatches);
+            }
+        }
+        return $valuesWhereKeysWereMatched;
     }
 
     /**Checks if string is valid.
