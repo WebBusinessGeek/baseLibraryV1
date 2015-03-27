@@ -163,6 +163,14 @@ abstract class BaseModel extends Model{
 
     }
 
+    /**Checks if string is valid.
+     * Returns TRUE if it is a valid string.
+     * Returns FALSE if its not.
+     * THROWS an EXCEPTION if the value passed is not a string.
+     * @param $stringToCheck
+     * @return bool
+     * @throws \Exception
+     */
     public function stringIsValid($stringToCheck)
     {
         if(!is_string($stringToCheck))

@@ -269,19 +269,30 @@ class MockBaseModelTest extends \TestCase {
     }
 
 
+    /**
+     *@group baseModelTests
+     */
     public function test_stringIsValid_method_returns_true_if_string_has_no_invalid_characters()
     {
-//        $goodString = 'goodString';
-//
-//        $mockBaseModel = new MockBaseModel();
-//        $response = $mockBaseModel->stringIsValid($goodString);
-//
-//        $this->assertTrue($response);
+        $goodString = 'goodString';
+
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->stringIsValid($goodString);
+
+        $this->assertTrue($response);
     }
 
+    /**
+     *@group baseModelTests
+     */
     public function test_stringIsValid_method_returns_false_if_string_has_invalid_characters()
     {
+        $badString = 'badString!!#&@#';
 
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->stringIsValid($badString);
+
+        $this->assertFalse($response);
     }
 
 
