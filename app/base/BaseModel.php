@@ -13,6 +13,8 @@ use Illuminate\Database\Eloquent\Model;
 
 abstract class BaseModel extends Model{
 
+    protected $invalidCharactersForStringValidation = "/[$%^&*()\-_+={}|\\[\]:;\"'<>?,.\/]/";
+
     protected $primaryOwnerClassName;
 
     protected $multiOwnerClassNames = [];
@@ -143,17 +145,56 @@ abstract class BaseModel extends Model{
     {
         $attributeNamesThatRequireStringFormatting = $this->getNamesOfSelfAttributesWhereOptionAndValueMatchThis('format', 'string');
 
-        //determine if all values are valid strings
-        $attributesToBeCheckedForStringValidation = $this->pullAttributesByName($attributesToCheck,$attributeNamesThatRequireStringFormatting);
+        $valuesToBeCheckedForStringValidation = $this->pullValueFromAssociativeArrayWhereKeysMatch($attributesToCheck,$attributeNamesThatRequireStringFormatting);
 
+        $invalidCounter = 0;
+        foreach($valuesToBeCheckedForStringValidation as $attributeValue)
+        {
+            if(!$this->stringIsValid($attributeValue))
+            {
+                $invalidCounter++;
+            }
+        }
+       return ($invalidCounter < 0)? : false;
+    }
 
-        //return true if all are valid
+    public function pullValueFromAssociativeArrayWhereKeysMatch($associativeArrayToBeChecked = [], $keysToMatch = [])
+    {
 
-        //return false if not
+    }
+
+    public function stringIsValid($stringToCheck)
+    {
+        if(!is_string($stringToCheck))
+        {
+            throw new \Exception('Argument passed is not a string.');
+        }
+        return(!$this->isInvalidCharactersPresentInString($stringToCheck))? :false;
+    }
+
+    public function isInvalidCharactersPresentInString($stringToCheck)
+    {
+        $invalidCharacters = $this->getInvalidCharactersForStringValidation();
+        return (preg_match_all($invalidCharacters, $stringToCheck) > 0) ? false :true;
     }
 
 
+    /**Returns invalidCharactersForStringValidation property value.
+     * @return string
+     */
+    public function getInvalidCharactersForStringValidation()
+    {
+        return $this->invalidCharactersForStringValidation;
+    }
 
+
+    /** Returns the names of attributes on Model that have the passed $option set to the passed $value.
+     * Returns names as array.
+     * @param $option
+     * @param $value
+     * @return array
+     * @throws \Exception
+     */
     public function getNamesOfSelfAttributesWhereOptionAndValueMatchThis($option, $value)
     {
         if(!$this->isValidOptionForSelfAttributes($option))

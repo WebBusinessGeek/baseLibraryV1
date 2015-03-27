@@ -226,6 +226,25 @@ class MockBaseModelTest extends \TestCase {
         $mockBaseModel->getNamesOfSelfAttributesWhereOptionAndValueMatchThis($validOption, $validValueButNotPresent);
     }
 
+
+
+    /**
+     *@group baseModelTests
+     */
+    public function test_getInvalidCharactersForStringValidation_returns_the_invalidCharactersForStringValidation_property()
+    {
+        $defaultInvalidCharacters = "/[$%^&*()\-_+={}|\\[\]:;\"'<>?,.\/]/";
+
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->getInvalidCharactersForStringValidation();
+
+        $this->assertEquals($defaultInvalidCharacters, $response);
+    }
+
+
+    
+
+
     public function test_stringAttributesAreValid_method_returns_false_if_invalid_strings_are_submitted_as_attributes()
     {
 
