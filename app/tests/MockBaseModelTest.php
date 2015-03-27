@@ -242,7 +242,47 @@ class MockBaseModelTest extends \TestCase {
     }
 
 
-    
+    /**
+     *@group baseModelTests
+     */
+    public function test_isInvalidCharactersPresentInString_method_returns_true_if_invalid_characters_are_present_in_string()
+    {
+        $stringWithInvalidCharacters = 'badString??$';
+
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->isInvalidCharactersPresentInString($stringWithInvalidCharacters);
+
+        $this->assertTrue($response);
+    }
+
+    /**
+     *@group baseModelTests
+     */
+    public function test_isInvalidCharactersPresentInString_method_returns_false_if_invalid_characters_are_not_present_in_string()
+    {
+        $stringWithNoInvalidCharacters = 'goodString';
+
+        $mockBaseModel = new MockBaseModel();
+        $response = $mockBaseModel->isInvalidCharactersPresentInString($stringWithNoInvalidCharacters);
+
+        $this->assertFalse($response);
+    }
+
+
+    public function test_stringIsValid_method_returns_true_if_string_has_no_invalid_characters()
+    {
+//        $goodString = 'goodString';
+//
+//        $mockBaseModel = new MockBaseModel();
+//        $response = $mockBaseModel->stringIsValid($goodString);
+//
+//        $this->assertTrue($response);
+    }
+
+    public function test_stringIsValid_method_returns_false_if_string_has_invalid_characters()
+    {
+
+    }
 
 
     public function test_stringAttributesAreValid_method_returns_false_if_invalid_strings_are_submitted_as_attributes()

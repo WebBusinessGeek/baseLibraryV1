@@ -172,10 +172,17 @@ abstract class BaseModel extends Model{
         return(!$this->isInvalidCharactersPresentInString($stringToCheck))? :false;
     }
 
+
+    /**Checks if invalid Characters are present in string.
+     * Returns TRUE if invalid characters are detected.
+     * Returns FALSE if NO invalid characters are detected.
+     * @param $stringToCheck
+     * @return bool
+     */
     public function isInvalidCharactersPresentInString($stringToCheck)
     {
         $invalidCharacters = $this->getInvalidCharactersForStringValidation();
-        return (preg_match_all($invalidCharacters, $stringToCheck) > 0) ? false :true;
+        return (preg_match_all($invalidCharacters, $stringToCheck) > 0) ? :false;
     }
 
 
