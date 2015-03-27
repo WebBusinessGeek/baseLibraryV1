@@ -29,20 +29,6 @@ class MockBaseInternalService extends BaseInternalService {
         return $stringValidationCheck;
     }
 
-    public function runPREAttributeManipulationLogic()
-    {
-
-    }
-
-    public function runAttributeManipulationLogic($credentialsOrAttributes = [])
-    {
-
-    }
-
-    public function runPOSTAttributeManipulationLogic($originalAttributes = [], $manipulatedAttributes = [])
-    {
-
-    }
 
 
 }

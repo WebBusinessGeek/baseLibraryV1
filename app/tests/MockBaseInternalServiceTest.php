@@ -263,17 +263,49 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
 
-    public function test_store_method_sends_error_message_if_attributes_fail_child_implemented_validation()
+    public function test_isInstanceOfModel_method_returns_false_if_model_passed_is_not_an_object()
     {
+        $notAnObject = 'string';
 
+        $mockBaseModel = new MockBaseModel();
+        $internalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $internalService->isInstanceOfModel($notAnObject);
+
+       $this->assertFalse($response);
     }
+
+    public function test_is_InstanceOfModel_method_returns_false_if_model_passed_is_not_instance_of_propertyModel()
+    {
+        $notPropertyModel = new MockBaseModelWithoutAttributes();
+
+        $mockBaseModel = new MockBaseModel();
+        $internalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $internalService->isInstanceOfModel($notPropertyModel);
+
+        $this->assertFalse($response);
+    }
+
+    public function test_isInstanceOfModel_method_returns_true_if_model_passed_is_instance_of_propertyModel()
+    {
+        $mockBaseModel = new MockBaseModel();
+        $internalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $internalService->isInstanceOfModel($mockBaseModel);
+
+        $this->assertTrue($response);
+    }
+
+
+
 
     public function test_store_method_sends_error_message_if_attributes_are_not_accepted_by_model()
     {
 
     }
 
-    public function test_store_method_sends_error_message_if_array_is_not_returned_from_runAttributeManipulationLogic_method()
+    public function test_store_method_sends_error_message_if_attributes_fail_child_implemented_validation_methods()
     {
 
     }

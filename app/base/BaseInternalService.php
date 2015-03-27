@@ -46,7 +46,6 @@ abstract class BaseInternalService {
             return $this->sendMessage('Attributes failed validation.');
         }
 
-
         $manipulatedAttributes = $this->runPREandPOSTHooksAndReturnManipulatedAttributes($credentialsOrAttributes);
 
         if(!is_array($manipulatedAttributes))
@@ -55,7 +54,37 @@ abstract class BaseInternalService {
         }
 
         $newModel = $this->addAttributesToNewModel($manipulatedAttributes);
-        return $this->storeEloquentModel($newModel);
+
+        if(!$this->isInstanceOfModel($newModel))
+        {
+            throw new \Exception('New model was not created.');
+        }
+
+        $storeModelResponse =  $this->storeEloquentModel($newModel);
+
+        if(!$this->isInstanceOfModel($storeModelResponse) || $storeModelResponse !== true)
+        {
+            throw new \Exception('Model not stored in database');
+        }
+
+        return $storeModelResponse;
+    }
+
+    /**Check if passed in $modelToCheck is instance of the property Model.
+     * Returns TRUE if $modelToCheck is an instance.
+     * Returns FALSE if not.
+     * @param $modelToCheck
+     * @return bool
+     */
+    public function isInstanceOfModel($modelToCheck)
+    {
+        if(!is_object($modelToCheck))
+        {
+            return false;
+        }
+        $classOfModelToCheck = '\\'. get_class($modelToCheck);
+        $classOfPropertyModel = $this->getModelClassName();
+        return ($classOfModelToCheck == $classOfPropertyModel);
     }
 
 
