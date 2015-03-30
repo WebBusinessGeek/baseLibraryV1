@@ -327,7 +327,17 @@ class MockBaseInternalServiceTest extends \TestCase {
 
     public function test_store_method_sends_error_message_if_attributes_fail_child_implemented_validation_methods()
     {
+        $goodAttributesBadValue = [
+            'attribute1' => 'bad#$#$#',
+            'attribute2' => 'goodValue',
+            'attribute3' => 'goodValue',
+        ];
 
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+        $response = $mockInternalService->store($goodAttributesBadValue);
+
+        $this->assertEquals('Attributes failed validation.', $response);
     }
 
     public function test_store_method_returns_new_model_on_success()
