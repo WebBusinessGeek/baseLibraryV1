@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3488430f-fbf7-4678-bf2a-dc854a3d647e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/BaseInternalService.php" afterPath="$PROJECT_DIR$/app/base/BaseInternalService.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" afterPath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" />
     </list>
     <ignored path="baseLibrary.iws" />
@@ -26,14 +27,14 @@
     <favorites_list name="baseLibrary" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.32914045">
+    <splitter split-orientation="horizontal" split-proportion="0.6533892">
       <split-first>
         <leaf>
           <file leaf-file-name="BaseInternalService.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.438849" vertical-offset="600" max-vertical-offset="7000">
-                  <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+                <state vertical-scroll-proportion="-0.53956836" vertical-offset="1100" max-vertical-offset="7175">
+                  <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
                   <folding />
                 </state>
               </provider>
@@ -46,8 +47,10 @@
           <file leaf-file-name="MockBaseInternalServiceTest.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.78417265" vertical-offset="7730" max-vertical-offset="8675">
-                  <caret line="339" column="58" selection-start-line="339" selection-start-column="58" selection-end-line="339" selection-end-column="58" />
+                <state vertical-scroll-proportion="1.7913669" vertical-offset="7630" max-vertical-offset="9525">
+                  <caret line="327" column="4" selection-start-line="327" selection-start-column="4" selection-end-line="327" selection-end-column="4" />
+                  <caret line="345" column="4" selection-start-line="345" selection-start-column="4" selection-end-line="345" selection-end-column="4" />
+                  <caret line="363" column="4" selection-start-line="363" selection-start-column="4" selection-end-line="363" selection-end-column="4" />
                   <folding />
                 </state>
               </provider>
@@ -441,13 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2015_03_25_165104_create_mockBaseModels_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82733816" vertical-offset="125" max-vertical-offset="1025">
-          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35971224" vertical-offset="0" max-vertical-offset="695">
@@ -485,18 +481,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2015_03_25_165104_create_mockBaseModels_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82733816" vertical-offset="125" max-vertical-offset="1025">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding>
+            <marker date="1427302486000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1427302486000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427302486000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
+            <marker date="1427302486000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427302486000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427302486000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427302486000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
+            <marker date="1427302486000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78417265" vertical-offset="7730" max-vertical-offset="8675">
-          <caret line="339" column="58" selection-start-line="339" selection-start-column="58" selection-end-line="339" selection-end-column="58" />
+        <state vertical-scroll-proportion="1.7913669" vertical-offset="7630" max-vertical-offset="9525">
+          <caret line="327" column="4" selection-start-line="327" selection-start-column="4" selection-end-line="327" selection-end-column="4" />
+          <caret line="345" column="4" selection-start-line="345" selection-start-column="4" selection-end-line="345" selection-end-column="4" />
+          <caret line="363" column="4" selection-start-line="363" selection-start-column="4" selection-end-line="363" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.438849" vertical-offset="600" max-vertical-offset="7000">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.53956836" vertical-offset="1100" max-vertical-offset="7175">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
           <folding />
         </state>
       </provider>

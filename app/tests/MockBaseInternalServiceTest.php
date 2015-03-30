@@ -306,9 +306,9 @@ class MockBaseInternalServiceTest extends \TestCase {
         $this->assertTrue($response);
     }
 
-
-
-
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_store_method_sends_error_message_if_attributes_are_not_accepted_by_model()
     {
         $badAttributes = [
@@ -325,6 +325,9 @@ class MockBaseInternalServiceTest extends \TestCase {
         $this->assertEquals('Attributes are not accepted by model.', $response);
     }
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_store_method_sends_error_message_if_attributes_fail_child_implemented_validation_methods()
     {
         $goodAttributesBadValue = [
@@ -340,9 +343,40 @@ class MockBaseInternalServiceTest extends \TestCase {
         $this->assertEquals('Attributes failed validation.', $response);
     }
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_store_method_returns_new_model_on_success()
     {
+        $goodAttributesGoodValues = [
+            'attribute1' => 'goodValue',
+            'attribute2' => 'goodValue',
+            'attribute3' => 'goodValue',
+        ];
 
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+        $response = $mockInternalService->store($goodAttributesGoodValues);
+
+        $this->assertTrue(is_object($response));
+    }
+
+    /**
+     * @group mockInternalServiceTests
+     */
+    public function test_store_method_returns_model_of_correct_class_on_success()
+    {
+        $goodAttributesGoodValues = [
+            'attribute1' => 'goodValue',
+            'attribute2' => 'goodValue',
+            'attribute3' => 'goodValue',
+        ];
+
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+        $response = $mockInternalService->store($goodAttributesGoodValues);
+
+        $this->assertTrue($mockInternalService->isInstanceOfModel($response));
     }
 
 

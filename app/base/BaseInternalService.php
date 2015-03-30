@@ -29,7 +29,14 @@ abstract class BaseInternalService {
     }
 
 
-
+    /**Creates and Stores a new Model instance in the database table.
+     * Returns an instance of the Model on succes && storeEloquentModel method's ReturnInstance para set to True.
+     * If ReturnInstance parameter set to false the Return value will be TRUE (bool) on success.
+     * Throws descriptive error messages or  EXCEPTIONS on failure.
+     * @param array $credentialsOrAttributes
+     * @return bool|Model|mixed
+     * @throws \Exception
+     */
     public function store($credentialsOrAttributes = [])
     {
         $attributesAcceptedResponse = $this->checkModelAcceptsAttributes($credentialsOrAttributes);
