@@ -90,6 +90,28 @@ abstract class BaseInternalService {
         return $this->getEloquentModelFromDatabaseById($id);
     }
 
+
+    public function update($id, $attributes = [])
+    {
+        $showMethodCallResponse = $this->show($id);
+        $checkIfShowResponseIsAModel = $this->isInstanceOfModel($showMethodCallResponse);
+
+        if(!$checkIfShowResponseIsAModel)
+        {
+            return $errorMessage = $showMethodCallResponse;
+        }
+
+        //what if model does not accept attributes?
+        
+        //what if attributes are invalid format?
+
+        $updatedModel = $this->updateAttributesOnExistingModel($existingModel = $showMethodCallResponse, $attributes);
+        return $updatedModel;
+    }
+
+
+
+
     /**Attempts to retrieve a model from the database by its id.
      * Returns the MODEL if it exists.
      * Throws an Exception if it does not exist.
@@ -298,18 +320,7 @@ abstract class BaseInternalService {
 
 
 
-
-
-
-
-
-
     public function index()
-    {
-
-    }
-
-    public function update()
     {
 
     }

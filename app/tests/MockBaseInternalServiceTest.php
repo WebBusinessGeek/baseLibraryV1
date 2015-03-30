@@ -533,4 +533,39 @@ class MockBaseInternalServiceTest extends \TestCase {
 
         $newModelInDatabase->delete();
     }
+
+
+
+    public function test_update_method_returns_error_message_if_model_does_not_exists()
+    {
+
+    }
+
+    public function test_update_method_returns_error_message_if_model_does_not_accept_attributes()
+    {
+
+    }
+
+    public function test_update_method_returns_error_message_if_attributes_fail_validation()
+    {
+
+    }
+
+    public function test_update_method_returns_correct_class_if_model_exists_and_attributes_are_valid()
+    {
+
+    }
+
+    public function test_update_method_returns_correct_instance_if_model_exists_and_attributes_are_valid()
+    {
+
+    }
+
+    public function test_update_method_returns_model_with_updated_attributes_if_model_exists_and_attributes_are_valid()
+    {
+
+    }
+
+
+
 }
