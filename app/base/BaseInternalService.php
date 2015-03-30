@@ -40,47 +40,49 @@ abstract class BaseInternalService {
     public function store($credentialsOrAttributes = [])
     {
         $attributesAcceptedResponse = $this->checkModelAcceptsAttributes($credentialsOrAttributes);
-
         if($attributesAcceptedResponse === false)
         {
             return $this->sendMessage('Attributes are not accepted by model.');
         }
 
         $validationLogicResponse = $this->runValidationLogicHook($credentialsOrAttributes);
-
         if($validationLogicResponse === false)
         {
             return $this->sendMessage('Attributes failed validation.');
         }
 
         $manipulatedAttributes = $this->runPREandPOSTHooksAndReturnManipulatedAttributes($credentialsOrAttributes);
-
         if(!is_array($manipulatedAttributes))
         {
             throw new \Exception('Array not returned from the runAttributeManipulationLogic method.');
         }
 
         $newModel = $this->addAttributesToNewModel($manipulatedAttributes);
-
         if(!$this->isInstanceOfModel($newModel))
         {
             throw new \Exception('New model was not created.');
         }
 
         $storeModelResponse =  $this->storeEloquentModel($newModel);
-
         if((is_object($storeModelResponse) && $this->isInstanceOfModel($storeModelResponse) == false) ||
             (!is_object($storeModelResponse) && $storeModelResponse == false))
         {
             throw new \Exception('Model was not stored in database.');
         }
-
         return $storeModelResponse;
     }
 
-    public function show()
-    {
 
+
+
+    public function show($id)
+    {
+        $modelExistsCheck = $this->checkIfModelExists($id);
+        if(!$modelExistsCheck)
+        {
+            $this->sendMessage('No model by id:' . $id);
+        }
+        return $this->getEloquentModelFromDatabaseById($id);
     }
 
     /**Check if passed in $modelToCheck is instance of the property Model.
