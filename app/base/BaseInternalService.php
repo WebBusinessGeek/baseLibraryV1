@@ -10,6 +10,7 @@ namespace Base;
 
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 abstract class BaseInternalService {
 
@@ -78,21 +79,36 @@ abstract class BaseInternalService {
     public function show($id)
     {
         $modelExistsCheck = $this->checkIfModelExists($id);
-        if(!$modelExistsCheck)
+        if($modelExistsCheck == false)
         {
             $this->sendMessage('No model by id:' . $id);
         }
         return $this->getEloquentModelFromDatabaseById($id);
     }
 
+    public function attemptToRetrieveEloquentModelFromDatabase($modelId)
+    {
+        $modelClassName = $this->getModelClassName();
+        $model = $modelClassName::findOrFail($modelId);
+        return $model;
+    }
+
     public function checkIfModelExists($modelId)
     {
-
+        try
+        {
+            $this->attemptToRetrieveEloquentModelFromDatabase($modelId);
+        }
+        catch(ModelNotFoundException $e)
+        {
+            return false;
+        }
+        return true;
     }
 
     public function getEloquentModelFromDatabaseById($modelId)
     {
-
+        return $this->attemptToRetrieveEloquentModelFromDatabase($modelId);
     }
     /**Check if passed in $modelToCheck is instance of the property Model.
      * Returns TRUE if $modelToCheck is an instance.

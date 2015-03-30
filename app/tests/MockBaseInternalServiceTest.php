@@ -382,6 +382,20 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
 
+    public function test_attemptToRetrieveEloquentModelFromDatabase_method_throws_an_exception_if_model_does_not_exist()
+    {
+
+    }
+
+    public function test_attemptToRetrieveEloquentModelFromDatabase_method_returns_correct_instance_if_model_exists()
+    {
+
+    }
+
+    public function test_attemptToRetrieveEloquentModelFromDatabase_method_returns_correct_class_if_model_exists()
+    {
+
+    }
 
     public function test_checkIfModelExists_method_returns_false_if_model_with_given_id_does_not_exist()
     {
@@ -410,6 +424,6 @@ class MockBaseInternalServiceTest extends \TestCase {
 
     public function test_show_method_returns_model_instance_if_model_with_given_id_exists()
     {
-        
+
     }
 }
