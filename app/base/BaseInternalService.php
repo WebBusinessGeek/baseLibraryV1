@@ -85,6 +85,15 @@ abstract class BaseInternalService {
         return $this->getEloquentModelFromDatabaseById($id);
     }
 
+    public function checkIfModelExists($modelId)
+    {
+
+    }
+
+    public function getEloquentModelFromDatabaseById($modelId)
+    {
+
+    }
     /**Check if passed in $modelToCheck is instance of the property Model.
      * Returns TRUE if $modelToCheck is an instance.
      * Returns FALSE if not.
