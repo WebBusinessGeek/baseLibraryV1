@@ -473,25 +473,64 @@ class MockBaseInternalServiceTest extends \TestCase {
         $response = $mockInternalService->checkIfModelExists($id);
 
         $this->assertTrue($response);
+        $newModelInDatabase->delete();
     }
 
-    public function test_getEloquentModelFromDatabaseById_method_retrieves_model_with_correct_id_from_database_table()
-    {
-
-    }
-
-    public function test_getEloquentModelFromDatabaseById_method_retrieves_model_with_correct_class_from_database_table()
-    {
-
-    }
-
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_show_method_returns_error_message_if_model_with_given_id_does_not_exists()
     {
+        $badId = 'aaa';
 
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $mockInternalService->show($badId);
+        $this->assertEquals('No model by id: '. $badId, $response);
     }
 
-    public function test_show_method_returns_model_instance_if_model_with_given_id_exists()
+    /**
+     * @group mockInternalServiceTests
+     */
+    public function test_show_method_returns_correct_class_if_model_with_given_id_exists()
     {
+        $newModelInDatabase = MockBaseModel::create([
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+        ]);
 
+        $id = $newModelInDatabase->id;
+
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $mockInternalService->show($id);
+        $this->assertTrue($mockInternalService->isInstanceOfModel($response));
+
+        $newModelInDatabase->delete();
+    }
+
+    /**
+     * @group mockInternalServiceTests
+     */
+    public function test_show_method_returns_correct_instance_if_model_with_given_id_exists()
+    {
+        $newModelInDatabase = MockBaseModel::create([
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+        ]);
+
+        $id = $newModelInDatabase->id;
+
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $mockInternalService->show($id);
+        $this->assertEquals($id, $response->id);
+
+        $newModelInDatabase->delete();
     }
 }

@@ -74,14 +74,18 @@ abstract class BaseInternalService {
     }
 
 
-
-
+    /**Returns MODEL instance from database if it exists.
+     * If it does not exists method will return an ERROR message.
+     * @param $id
+     * @return mixed
+     * @throws \Exception
+     */
     public function show($id)
     {
         $modelExistsCheck = $this->checkIfModelExists($id);
-        if($modelExistsCheck == false)
+        if(!$modelExistsCheck)
         {
-            $this->sendMessage('No model by id:' . $id);
+            return $this->sendMessage('No model by id: ' . $id);
         }
         return $this->getEloquentModelFromDatabaseById($id);
     }
