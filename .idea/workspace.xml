@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3488430f-fbf7-4678-bf2a-dc854a3d647e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/BaseInternalService.php" afterPath="$PROJECT_DIR$/app/base/BaseInternalService.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" afterPath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/MockBaseModel.php" afterPath="$PROJECT_DIR$/app/base/MockBaseModel.php" />
     </list>
     <ignored path="baseLibrary.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,8 +48,8 @@
           <file leaf-file-name="MockBaseInternalServiceTest.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.8561151" vertical-offset="10455" max-vertical-offset="11900">
-                  <caret line="450" column="38" selection-start-line="450" selection-start-column="38" selection-end-line="450" selection-end-column="38" />
+                <state vertical-scroll-proportion="-0.4676259" vertical-offset="11575" max-vertical-offset="12375">
+                  <caret line="458" column="7" selection-start-line="458" selection-start-column="7" selection-end-line="458" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -526,8 +524,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8561151" vertical-offset="10455" max-vertical-offset="11900">
-          <caret line="450" column="38" selection-start-line="450" selection-start-column="38" selection-end-line="450" selection-end-column="38" />
+        <state vertical-scroll-proportion="-0.4676259" vertical-offset="11575" max-vertical-offset="12375">
+          <caret line="458" column="7" selection-start-line="458" selection-start-column="7" selection-end-line="458" selection-end-column="7" />
           <folding />
         </state>
       </provider>

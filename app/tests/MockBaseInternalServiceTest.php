@@ -440,6 +440,9 @@ class MockBaseInternalServiceTest extends \TestCase {
         $newModelInDatabase->delete();
     }
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_checkIfModelExists_method_returns_false_if_model_with_given_id_does_not_exist()
     {
         $fakeId = 'aaa';
@@ -451,9 +454,25 @@ class MockBaseInternalServiceTest extends \TestCase {
         $this->assertFalse($response);
     }
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_checkIfModelExists_method_returns_true_if_model_with_given_id_does_exists_in_database_table()
     {
+        $newModelInDatabase = MockBaseModel::create([
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+        ]);
 
+        $id = $newModelInDatabase->id;
+
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $mockInternalService->checkIfModelExists($id);
+
+        $this->assertTrue($response);
     }
 
     public function test_getEloquentModelFromDatabaseById_method_retrieves_model_with_correct_id_from_database_table()
