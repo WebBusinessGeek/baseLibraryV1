@@ -382,24 +382,73 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_attemptToRetrieveEloquentModelFromDatabase_method_throws_an_exception_if_model_does_not_exist()
     {
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $this->setExpectedException('Exception', 'No query results for model [Base\MockBaseModel]');
+
+        $mockInternalService->attemptToRetrieveEloquentModelFromDatabase('aaa');
 
     }
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_attemptToRetrieveEloquentModelFromDatabase_method_returns_correct_instance_if_model_exists()
     {
+        $newModelInDatabase = MockBaseModel::create([
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+        ]);
 
+        $idToCheck = $newModelInDatabase->id;
+
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $mockInternalService->attemptToRetrieveEloquentModelFromDatabase($idToCheck);
+
+        $this->assertEquals($idToCheck, $response->id);
+        $newModelInDatabase->delete();
     }
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_attemptToRetrieveEloquentModelFromDatabase_method_returns_correct_class_if_model_exists()
     {
+        $newModelInDatabase = MockBaseModel::create([
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+        ]);
 
+        $idToCheck = $newModelInDatabase->id;
+
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $mockInternalService->attemptToRetrieveEloquentModelFromDatabase($idToCheck);
+        $this->assertTrue($mockInternalService->isInstanceOfModel($response));
+
+        $newModelInDatabase->delete();
     }
 
     public function test_checkIfModelExists_method_returns_false_if_model_with_given_id_does_not_exist()
     {
+        $fakeId = 'aaa';
 
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $mockInternalService->checkIfModelExists($fakeId);
+        $this->assertFalse($response);
     }
 
     public function test_checkIfModelExists_method_returns_true_if_model_with_given_id_does_exists_in_database_table()

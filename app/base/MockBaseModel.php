@@ -12,6 +12,7 @@ namespace Base;
 class MockBaseModel extends BaseModel {
 
     protected $table = 'mockBaseModels';
+    protected $fillable = ['attribute1','attribute2','attribute3'];
 
     protected $modelAttributes = [
         //		START AT ZERO (0)!!! => [

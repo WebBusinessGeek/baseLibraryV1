@@ -86,12 +86,19 @@ abstract class BaseInternalService {
         return $this->getEloquentModelFromDatabaseById($id);
     }
 
+    /**Attempts to retrieve a model from the database by its id.
+     * Returns the MODEL if it exists.
+     * Throws an Exception if it does not exist.
+     * @param $modelId
+     * @return mixed
+     */
     public function attemptToRetrieveEloquentModelFromDatabase($modelId)
     {
         $modelClassName = $this->getModelClassName();
         $model = $modelClassName::findOrFail($modelId);
         return $model;
     }
+
 
     public function checkIfModelExists($modelId)
     {
