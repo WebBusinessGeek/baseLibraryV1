@@ -311,7 +311,18 @@ class MockBaseInternalServiceTest extends \TestCase {
 
     public function test_store_method_sends_error_message_if_attributes_are_not_accepted_by_model()
     {
+        $badAttributes = [
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+            'badAttribute' => 'someValue'
+        ];
 
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+        $response = $mockInternalService->store($badAttributes);
+
+        $this->assertEquals('Attributes are not accepted by model.', $response);
     }
 
     public function test_store_method_sends_error_message_if_attributes_fail_child_implemented_validation_methods()

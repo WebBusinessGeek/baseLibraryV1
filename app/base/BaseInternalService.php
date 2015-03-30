@@ -67,7 +67,7 @@ abstract class BaseInternalService {
         {
             throw new \Exception('Model was not stored in database.');
         }
-        
+
         return $storeModelResponse;
     }
 
