@@ -78,6 +78,11 @@ abstract class BaseInternalService {
         return $storeModelResponse;
     }
 
+    public function show()
+    {
+
+    }
+
     /**Check if passed in $modelToCheck is instance of the property Model.
      * Returns TRUE if $modelToCheck is an instance.
      * Returns FALSE if not.
@@ -259,10 +264,7 @@ abstract class BaseInternalService {
 
 
 
-    public function show()
-    {
 
-    }
 
     public function index()
     {

@@ -359,6 +359,7 @@ class MockBaseInternalServiceTest extends \TestCase {
         $response = $mockInternalService->store($goodAttributesGoodValues);
 
         $this->assertTrue(is_object($response));
+        $response->delete();
     }
 
     /**
@@ -377,6 +378,7 @@ class MockBaseInternalServiceTest extends \TestCase {
         $response = $mockInternalService->store($goodAttributesGoodValues);
 
         $this->assertTrue($mockInternalService->isInstanceOfModel($response));
+        $response->delete();
     }
 
 
