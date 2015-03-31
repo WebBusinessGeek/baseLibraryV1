@@ -728,6 +728,34 @@ class MockBaseInternalServiceTest extends \TestCase {
         $newModelInDB->delete();
     }
 
+    /**
+     * @group mockInternalServiceTests
+     */
+    public function test_deleteEloquentModel_method_removes_identified_model_from_database()
+    {
+        $newModelInDB = MockBaseModel::create([
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+        ]);
+
+        $id = $newModelInDB->id;
+
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $mockInternalService->deleteEloquentModel($newModelInDB);
+        $response = MockBaseModel::find($id);
+
+        $this->assertNull($response);
+    }
+
+    public function test_deleteEloquentModel_method_returns_true_on_success()
+    {
+
+    }
+
+
 
 
 

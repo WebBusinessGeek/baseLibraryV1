@@ -128,6 +128,24 @@ abstract class BaseInternalService {
     }
 
 
+    public function destroy($id)
+    {
+        $showMethodCallResponse = $this->show($id);
+
+        $checkIfShowResponseIsAModel = $this->isInstanceOfModel($showMethodCallResponse);
+        if(!$checkIfShowResponseIsAModel)
+        {
+            return $errorMessage = $showMethodCallResponse;
+        }
+        return $this->deleteEloquentModel($showMethodCallResponse);
+    }
+
+    public function deleteEloquentModel(Model $model)
+    {
+        return $model->delete();
+    }
+
+
 
 
     /**Attempts to retrieve a model from the database by its id.
@@ -341,10 +359,7 @@ abstract class BaseInternalService {
 
     }
 
-    public function destroy()
-    {
 
-    }
 
 
 
