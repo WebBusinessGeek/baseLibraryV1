@@ -750,9 +750,25 @@ class MockBaseInternalServiceTest extends \TestCase {
         $this->assertNull($response);
     }
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_deleteEloquentModel_method_returns_true_on_success()
     {
+        $newModelInDB = MockBaseModel::create([
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+        ]);
 
+        $id = $newModelInDB->id;
+
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $mockInternalService->deleteEloquentModel($newModelInDB);
+
+        $this->assertTrue($response);
     }
 
 
