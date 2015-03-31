@@ -592,9 +592,23 @@ class MockBaseInternalServiceTest extends \TestCase {
         $newMockInDB->delete();
     }
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_update_method_returns_error_message_if_model_does_not_exists()
     {
+        $badId = 'aaa';
+        $goodAttributesAndValues = [
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+        ];
 
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $mockInternalService->update($badId, $goodAttributesAndValues);
+        $this->assertEquals('No model by id: '. $badId, $response);
     }
 
 
