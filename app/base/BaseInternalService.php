@@ -159,6 +159,10 @@ abstract class BaseInternalService {
 
 
 
+    public function index()
+    {
+        //TODO: Implementation!
+    }
 
     /**Attempts to retrieve a model from the database by its id.
      * Returns the MODEL if it exists.
@@ -366,10 +370,7 @@ abstract class BaseInternalService {
     }
 
 
-    public function index()
-    {
 
-    }
 
 
 
