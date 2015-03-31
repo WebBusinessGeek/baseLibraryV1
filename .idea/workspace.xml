@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3488430f-fbf7-4678-bf2a-dc854a3d647e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" afterPath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/base/BaseInternalService.php" afterPath="$PROJECT_DIR$/app/base/BaseInternalService.php" />
     </list>
     <ignored path="baseLibrary.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,14 +26,14 @@
     <favorites_list name="baseLibrary" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.19846262">
+    <splitter split-orientation="horizontal" split-proportion="0.6533892">
       <split-first>
         <leaf>
           <file leaf-file-name="BaseInternalService.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.53956836" vertical-offset="2200" max-vertical-offset="8600">
-                  <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.32374102" vertical-offset="2075" max-vertical-offset="8850">
+                  <caret line="97" column="59" selection-start-line="97" selection-start-column="59" selection-end-line="97" selection-end-column="59" />
                   <folding>
                     <element signature="e#110#149#0#PHP" expanded="true" />
                   </folding>
@@ -48,8 +48,8 @@
           <file leaf-file-name="MockBaseInternalServiceTest.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.28057554" vertical-offset="17155" max-vertical-offset="18300">
-                  <caret line="702" column="7" selection-start-line="702" selection-start-column="7" selection-end-line="702" selection-end-column="7" />
+                <state vertical-scroll-proportion="-0.47482014" vertical-offset="17605" max-vertical-offset="18300">
+                  <caret line="699" column="0" selection-start-line="699" selection-start-column="0" selection-end-line="699" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -573,21 +573,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
+    <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53956836" vertical-offset="2200" max-vertical-offset="8600">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding>
-            <element signature="e#110#149#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-0.47482014" vertical-offset="17605" max-vertical-offset="18300">
+          <caret line="699" column="0" selection-start-line="699" selection-start-column="0" selection-end-line="699" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
+    <entry file="file://$PROJECT_DIR$/app/base/BaseInternalService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28057554" vertical-offset="17155" max-vertical-offset="18300">
-          <caret line="702" column="7" selection-start-line="702" selection-start-column="7" selection-end-line="702" selection-end-column="7" />
-          <folding />
+        <state vertical-scroll-proportion="0.32374102" vertical-offset="2075" max-vertical-offset="8850">
+          <caret line="97" column="59" selection-start-line="97" selection-start-column="59" selection-end-line="97" selection-end-column="59" />
+          <folding>
+            <element signature="e#110#149#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

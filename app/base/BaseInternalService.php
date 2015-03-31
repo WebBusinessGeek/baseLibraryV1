@@ -91,6 +91,16 @@ abstract class BaseInternalService {
     }
 
 
+    /**Returns an updated model based on attributes passed in if model exists and attributes are correct.
+     * Returns an ERROR message if attributes are not accepted.
+     * Returns an ERROR message if attributes fail validation.
+     * Returns an ERROR message if model does not exists.
+     * Otherwise returns the MODEL with updated attributes.
+     * @param $id
+     * @param array $attributes
+     * @return mixed
+     * @throws \Exception
+     */
     public function update($id, $attributes = [])
     {
         $attributeAcceptedByModel = $this->checkModelAcceptsAttributes($attributes);
