@@ -698,9 +698,34 @@ class MockBaseInternalServiceTest extends \TestCase {
         $newModelInDB->delete();
     }
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_update_method_saves_updates_in_database()
     {
+        $newModelInDB = MockBaseModel::create([
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+        ]);
 
+        $id = $newModelInDB->id;
+
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $newAttributes = [
+            'attribute1' => 'newValue1',
+            'attribute2' => 'newValue2',
+            'attribute3' => 'newValue3',
+        ];
+
+        $mockInternalService->update($id, $newAttributes);
+
+        $modelFromDB = MockBaseModel::find($id);
+        $this->assertEquals($newAttributes['attribute1'], $modelFromDB->attribute1);
+
+        $newModelInDB->delete();
     }
 
 
