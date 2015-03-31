@@ -535,6 +535,9 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_update_method_returns_error_message_if_model_does_not_accept_attributes()
     {
         $badAttributes = [
@@ -557,11 +560,36 @@ class MockBaseInternalServiceTest extends \TestCase {
 
         $response = $mockInternalService->update($id, $badAttributes);
         $this->assertEquals('Attributes are not accepted by model.', $response);
+
+        $newMockInDB->delete();
     }
 
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_update_method_returns_error_message_if_attributes_fail_validation()
     {
+        $goodAttributesBadValue = [
+            'attribute1' => 'bad#(@#(*@',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+        ];
 
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $newMockInDB = MockBaseModel::create([
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+        ]);
+
+        $id = $newMockInDB->id;
+
+        $response = $mockInternalService->update($id, $goodAttributesBadValue);
+        $this->assertEquals('Attributes failed validation.', $response);
+
+        $newMockInDB->delete();
     }
 
     public function test_update_method_returns_error_message_if_model_does_not_exists()
