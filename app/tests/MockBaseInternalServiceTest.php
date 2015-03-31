@@ -535,21 +535,40 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
 
-
-    public function test_update_method_returns_error_message_if_model_does_not_exists()
-    {
-
-    }
-
     public function test_update_method_returns_error_message_if_model_does_not_accept_attributes()
     {
+        $badAttributes = [
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+            'badAttribute' => 'someValue'
+        ];
 
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $newMockInDB = MockBaseModel::create([
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+        ]);
+
+        $id = $newMockInDB->id;
+
+        $response = $mockInternalService->update($id, $badAttributes);
+        $this->assertEquals('Attributes are not accepted by model.', $response);
     }
 
     public function test_update_method_returns_error_message_if_attributes_fail_validation()
     {
 
     }
+
+    public function test_update_method_returns_error_message_if_model_does_not_exists()
+    {
+
+    }
+
 
     public function test_update_method_returns_correct_class_if_model_exists_and_attributes_are_valid()
     {
@@ -565,6 +584,12 @@ class MockBaseInternalServiceTest extends \TestCase {
     {
 
     }
+
+    public function test_update_method_saves_updates_in_database()
+    {
+
+    }
+
 
 
 

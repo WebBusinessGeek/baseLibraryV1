@@ -93,17 +93,25 @@ abstract class BaseInternalService {
 
     public function update($id, $attributes = [])
     {
-        $showMethodCallResponse = $this->show($id);
-        $checkIfShowResponseIsAModel = $this->isInstanceOfModel($showMethodCallResponse);
+        $attributeAcceptedByModel = $this->checkModelAcceptsAttributes($attributes);
+        if(!$attributeAcceptedByModel)
+        {
+            return $this->sendMessage('Attributes are not accepted by model.');
+        }
 
+        $attributesAreValid = $this->runValidationLogicHook($attributes);
+        if($attributesAreValid === false)
+        {
+            return $this->sendMessage('Attributes failed validation.');
+        }
+
+        $showMethodCallResponse = $this->show($id);
+
+        $checkIfShowResponseIsAModel = $this->isInstanceOfModel($showMethodCallResponse);
         if(!$checkIfShowResponseIsAModel)
         {
             return $errorMessage = $showMethodCallResponse;
         }
-
-        //what if model does not accept attributes?
-        
-        //what if attributes are invalid format?
 
         $updatedModel = $this->updateAttributesOnExistingModel($existingModel = $showMethodCallResponse, $attributes);
         return $updatedModel;
@@ -247,7 +255,8 @@ abstract class BaseInternalService {
      */
     public function updateAttributesOnExistingModel(Model $model, $newAttributes = [])
     {
-        return $model->updateSelfAttributes($newAttributes);
+        $updatedModel = $model->updateSelfAttributes($newAttributes);
+        return $this->storeEloquentModel($updatedModel);
     }
 
 
@@ -315,9 +324,6 @@ abstract class BaseInternalService {
     {
         return;
     }
-
-
-
 
 
     public function index()
