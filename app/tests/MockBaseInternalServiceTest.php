@@ -760,9 +760,7 @@ class MockBaseInternalServiceTest extends \TestCase {
             'attribute2' => 'someValue',
             'attribute3' => 'someValue',
         ]);
-
-        $id = $newModelInDB->id;
-
+        
         $mockBaseModel = new MockBaseModel();
         $mockInternalService = new MockBaseInternalService($mockBaseModel);
 
@@ -771,6 +769,12 @@ class MockBaseInternalServiceTest extends \TestCase {
         $this->assertTrue($response);
     }
 
+
+
+    public function test_destroy_method_returns_error_message_if_model_does_not_exist()
+    {
+
+    }
 
 
 

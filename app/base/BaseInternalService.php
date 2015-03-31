@@ -140,6 +140,12 @@ abstract class BaseInternalService {
         return $this->deleteEloquentModel($showMethodCallResponse);
     }
 
+
+    /**Removes passed in MODEL from database.
+     * Returns true on success.
+     * @param Model $model
+     * @return bool|null
+     */
     public function deleteEloquentModel(Model $model)
     {
         return $model->delete();
