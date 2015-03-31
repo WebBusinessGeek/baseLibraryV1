@@ -128,6 +128,12 @@ abstract class BaseInternalService {
     }
 
 
+    /**Removes specified MODEL from database if it exists.
+     * Returns ERROR message if MODEL does not exists.
+     * Returns TRUE on success.
+     * @param $id
+     * @return bool|mixed|null
+     */
     public function destroy($id)
     {
         $showMethodCallResponse = $this->show($id);
