@@ -636,11 +636,37 @@ class MockBaseInternalServiceTest extends \TestCase {
 
         $response = $mockInternalService->update($id, $newAttributes);
         $this->assertTrue($mockInternalService->isInstanceOfModel($response));
+
+        $newModelInDB->delete();
     }
 
+
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_update_method_returns_correct_instance_if_model_exists_and_attributes_are_valid()
     {
+        $newModelInDB = MockBaseModel::create([
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+        ]);
 
+        $id = $newModelInDB->id;
+
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $newAttributes = [
+            'attribute1' => 'newValue1',
+            'attribute2' => 'newValue2',
+            'attribute3' => 'newValue3',
+        ];
+
+        $response = $mockInternalService->update($id, $newAttributes);
+        $this->assertEquals($id, $response->id);
+
+        $newModelInDB->delete();
     }
 
     public function test_update_method_returns_model_with_updated_attributes_if_model_exists_and_attributes_are_valid()

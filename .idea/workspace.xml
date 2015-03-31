@@ -48,8 +48,8 @@
           <file leaf-file-name="MockBaseInternalServiceTest.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.2086331" vertical-offset="15055" max-vertical-offset="16425">
-                  <caret line="616" column="7" selection-start-line="616" selection-start-column="7" selection-end-line="616" selection-end-column="7" />
+                <state vertical-scroll-proportion="-0.5827338" vertical-offset="16330" max-vertical-offset="17075">
+                  <caret line="645" column="7" selection-start-line="645" selection-start-column="7" selection-end-line="645" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -585,8 +585,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2086331" vertical-offset="15055" max-vertical-offset="16425">
-          <caret line="616" column="7" selection-start-line="616" selection-start-column="7" selection-end-line="616" selection-end-column="7" />
+        <state vertical-scroll-proportion="-0.5827338" vertical-offset="16330" max-vertical-offset="17075">
+          <caret line="645" column="7" selection-start-line="645" selection-start-column="7" selection-end-line="645" selection-end-column="7" />
           <folding />
         </state>
       </provider>
