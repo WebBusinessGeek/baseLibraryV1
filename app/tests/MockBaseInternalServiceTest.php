@@ -760,7 +760,7 @@ class MockBaseInternalServiceTest extends \TestCase {
             'attribute2' => 'someValue',
             'attribute3' => 'someValue',
         ]);
-        
+
         $mockBaseModel = new MockBaseModel();
         $mockInternalService = new MockBaseInternalService($mockBaseModel);
 
@@ -769,11 +769,41 @@ class MockBaseInternalServiceTest extends \TestCase {
         $this->assertTrue($response);
     }
 
-
-
+    /**
+     * @group mockInternalServiceTests
+     */
     public function test_destroy_method_returns_error_message_if_model_does_not_exist()
     {
+        $badId = 'aaa';
 
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $mockInternalService->destroy($badId);
+
+        $this->assertEquals('No model by id: '. $badId, $response);
+
+    }
+
+    /**
+     * @group mockInternalServiceTests
+     */
+    public function test_destroy_method_returns_true_on_success()
+    {
+        $newModelInDB = MockBaseModel::create([
+            'attribute1' => 'someValue',
+            'attribute2' => 'someValue',
+            'attribute3' => 'someValue',
+        ]);
+
+        $id = $newModelInDB->id;
+
+        $mockBaseModel = new MockBaseModel();
+        $mockInternalService = new MockBaseInternalService($mockBaseModel);
+
+        $response = $mockInternalService->destroy($id);
+
+        $this->assertTrue($response);
     }
 
 
