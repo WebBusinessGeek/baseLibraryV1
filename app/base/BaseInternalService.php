@@ -9,12 +9,10 @@
 namespace Base;
 
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 
-abstract class BaseInternalService {
+abstract class BaseInternalService extends ModelManager {
 
-    public $model;
+    use AttributeValidationHooks;
 
     public function __construct()
     {
@@ -28,10 +26,9 @@ abstract class BaseInternalService {
         }
 
     }
-
-
+    
     /**Creates and Stores a new Model instance in the database table.
-     * Returns an instance of the Model on succes && storeEloquentModel method's ReturnInstance para set to True.
+     * Returns an instance of the Model on success && storeEloquentModel method's ReturnInstance para set to True.
      * If ReturnInstance parameter set to false the Return value will be TRUE (bool) on success.
      * Throws descriptive error messages or  EXCEPTIONS on failure.
      * @param array $credentialsOrAttributes
@@ -147,104 +144,6 @@ abstract class BaseInternalService {
     }
 
 
-    /**Removes passed in MODEL from database.
-     * Returns true on success.
-     * @param Model $model
-     * @return bool|null
-     */
-    public function deleteEloquentModel(Model $model)
-    {
-        return $model->delete();
-    }
-
-
-
-    public function index()
-    {
-        //TODO: Implementation!
-    }
-
-    /**Attempts to retrieve a model from the database by its id.
-     * Returns the MODEL if it exists.
-     * Throws an Exception if it does not exist.
-     * @param $modelId
-     * @return mixed
-     */
-    public function attemptToRetrieveEloquentModelFromDatabase($modelId)
-    {
-        $modelClassName = $this->getModelClassName();
-        $model = $modelClassName::findOrFail($modelId);
-        return $model;
-    }
-
-
-    public function checkIfModelExists($modelId)
-    {
-        try
-        {
-            $this->attemptToRetrieveEloquentModelFromDatabase($modelId);
-        }
-        catch(ModelNotFoundException $e)
-        {
-            return false;
-        }
-        return true;
-    }
-
-    public function getEloquentModelFromDatabaseById($modelId)
-    {
-        return $this->attemptToRetrieveEloquentModelFromDatabase($modelId);
-    }
-    /**Check if passed in $modelToCheck is instance of the property Model.
-     * Returns TRUE if $modelToCheck is an instance.
-     * Returns FALSE if not.
-     * @param $modelToCheck
-     * @return bool
-     */
-    public function isInstanceOfModel($modelToCheck)
-    {
-        if(!is_object($modelToCheck))
-        {
-            return false;
-        }
-        $classOfModelToCheck = '\\'. get_class($modelToCheck);
-        $classOfPropertyModel = $this->getModelClassName();
-        return ($classOfModelToCheck == $classOfPropertyModel);
-    }
-
-
-    /**Allows child descendant to HOOK into a script to run custom validation logic.
-     * Returns false at this level to enforce a valid implementation on the child.
-     * @param array $credentialsOrAttributes
-     * @return bool
-     */
-    public function runValidationLogicHook($credentialsOrAttributes = [])
-    {
-        return false;
-    }
-
-
-    /**Returns the model's modelAttributes property as a multiDimensional array.
-     * @return mixed
-     */
-    public function getModelAttributes()
-    {
-        return $this->model->getSelfAttributes();
-    }
-
-
-
-    /**Checks if the model accepts the attributes or credentials being passed.
-     * Returns True if it does. False if not.
-     * @param array $credentialsOrAttributes
-     * @return mixed
-     */
-    public function checkModelAcceptsAttributes($credentialsOrAttributes = [])
-    {
-        return $this->model->checkSelfAcceptsAttributes($credentialsOrAttributes);
-    }
-
-
     /**Returns the message passed in if its a string.
      * @param $message
      * @return mixed
@@ -256,117 +155,6 @@ abstract class BaseInternalService {
             return $message;
         }
         throw new \Exception('Parameter must be of type - string');
-    }
-
-
-    /**Creates a new model instance and adds passed in attributes to it.
-     * Returns the new model instance.
-     * @param array $credentialsOrAttributes
-     * @return mixed
-     */
-    public function addAttributesToNewModel($credentialsOrAttributes = [])
-    {
-        $newModel = $this->createNewModelInstance();
-        $newModelWithAttributes = $this->updateAttributesOnExistingModel($newModel, $credentialsOrAttributes);
-        return $newModelWithAttributes;
-    }
-
-    /**Creates a new instance of $model - property object's class.
-     * @return mixed
-     */
-    public function createNewModelInstance()
-    {
-        $modelClassName = $this->getModelClassName();
-        $model = new $modelClassName();
-        return $model;
-    }
-
-
-    /**Returns class name of the $model - property object.
-     * @return mixed
-     */
-    public function getModelClassName()
-    {
-        return $this->model->getSelfClassName();
-    }
-
-
-    /**Updates the passed in model with the new attributes.
-     * Returns the updated model.
-     * @param Model $model
-     * @param array $newAttributes
-     * @return mixed
-     */
-    public function updateAttributesOnExistingModel(Model $model, $newAttributes = [])
-    {
-        $updatedModel = $model->updateSelfAttributes($newAttributes);
-        return $this->storeEloquentModel($updatedModel);
-    }
-
-
-    /**Stores model in database.
-     * @param Model $model
-     * @param bool $returnInstance
-     * @return bool|Model
-     * @throws \Exception
-     */
-    public function storeEloquentModel(Model $model, $returnInstance = true)
-    {
-        if($model->save())
-        {
-           return ($returnInstance) ? $model : true;
-        }
-        throw new \Exception('Model not stored in database');
-    }
-
-
-    /**HOOK group to all child descendant to HOOK into the script.
-     * All methods are HOOK method that allow the child to override functionality at various stages.
-     * Please review each method's documentation separately for more information.
-     * @param array $credentialsOrAttributes
-     * @return array
-     */
-    public function runPREandPOSTHooksAndReturnManipulatedAttributes($credentialsOrAttributes = [])
-    {
-        $this->runPREAttributeManipulationLogic();
-        $manipulatedAttributes = $this->runAttributeManipulationLogic($credentialsOrAttributes);
-        $this->runPOSTAttributeManipulationLogic($credentialsOrAttributes, $manipulatedAttributes);
-        return $manipulatedAttributes;
-    }
-
-
-    /**Allows child descendant to HOOK into script.
-     * The purpose is to allow the child to run any logic BEFORE attributes are added to the model.
-     * Will return NULL at this level.
-     * @return string
-     */
-    public function runPREAttributeManipulationLogic()
-    {
-        return;
-    }
-
-
-    /**Allows child descendant to HOOK into script.
-     * The purpose is to allow the child to perform any logic that will MANIPULATE the attributes.
-     * This MANIPULATION will happen before the attributes are added to the model.
-     * Will return the attributes as is at this level.
-     * @param array $credentialsOrAttributes
-     * @return array
-     */
-    public function runAttributeManipulationLogic($credentialsOrAttributes = [])
-    {
-        return $credentialsOrAttributes;
-    }
-
-
-    /**Allows child descendant to HOOK into script.
-     * This allows the child to perform any logic that should run AFTER the attributes are manipulated.
-     * The function will have both the MANIPULATED and ORIGINAL attribute groups available for use in any logic.
-     * Method should NOT return any value at any level (parent or child).
-     */
-    public function runPOSTAttributeManipulationLogic($originalAttributes = [], $manipulatedAttributes = [])
-    {
-        return;
     }
 
 
