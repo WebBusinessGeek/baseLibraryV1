@@ -21,6 +21,7 @@ abstract class BaseInternalService extends ModelManager {
     protected $attributesNotSetOnModelErrorMessage = 'Attributes not set on Model';
     protected $noModelFoundByIdErrorMessage = 'No model by id';
 
+    protected $parameterNotStringErrorMessage = 'Parameter must be of type - string';
     use AttributeValidationHooks;
 
     public function __construct()
@@ -163,7 +164,7 @@ abstract class BaseInternalService extends ModelManager {
         {
             return $message;
         }
-        throw new \Exception('Parameter must be of type - string');
+        throw new \Exception($this->parameterNotStringErrorMessage);
     }
 
 
