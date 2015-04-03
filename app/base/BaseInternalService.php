@@ -17,6 +17,9 @@ abstract class BaseInternalService extends ModelManager {
     protected $newModelNotCreatedErrorMessage = 'New model was not created.';
     protected $attributesNotAcceptedErrorMessage = 'Attributes are not accepted by model.';
     protected $modelNotStoredInDBErrorMessage = 'Model was not stored in database.';
+    protected $modelNotSetErrorMessage = 'Model is not set on Internal Service';
+    protected $attributesNotSetOnModelErrorMessage = 'Attributes not set on Model';
+
     
     use AttributeValidationHooks;
 
@@ -24,11 +27,11 @@ abstract class BaseInternalService extends ModelManager {
     {
         if($this->model == null)
         {
-            throw new \Exception('Model is not set on Internal Service');
+            throw new \Exception($this->modelNotSetErrorMessage);
         }
         elseif($this->getModelAttributes() == null)
         {
-            throw new \Exception('Attributes not set on Model');
+            throw new \Exception($this->attributesNotSetOnModelErrorMessage);
         }
 
     }
