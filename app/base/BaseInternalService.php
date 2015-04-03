@@ -12,6 +12,12 @@ namespace Base;
 
 abstract class BaseInternalService extends ModelManager {
 
+    protected $attributesFailedValidationErrorMessage = 'Attributes failed validation.';
+    protected $arrayNotReturnedFromManipulationLogicErrorMessage = 'Array not returned from the runAttributeManipulationLogic method.';
+    protected $newModelNotCreatedErrorMessage = 'New model was not created.';
+    protected $attributesNotAcceptedErrorMessage = 'Attributes are not accepted by model.';
+    protected $modelNotStoredInDBErrorMessage = 'Model was not stored in database.';
+    
     use AttributeValidationHooks;
 
     public function __construct()
@@ -26,7 +32,7 @@ abstract class BaseInternalService extends ModelManager {
         }
 
     }
-    
+
     /**Creates and Stores a new Model instance in the database table.
      * Returns an instance of the Model on success && storeEloquentModel method's ReturnInstance para set to True.
      * If ReturnInstance parameter set to false the Return value will be TRUE (bool) on success.
@@ -40,32 +46,32 @@ abstract class BaseInternalService extends ModelManager {
         $attributesAcceptedResponse = $this->checkModelAcceptsAttributes($credentialsOrAttributes);
         if($attributesAcceptedResponse === false)
         {
-            return $this->sendMessage('Attributes are not accepted by model.');
+            return $this->sendMessage($this->attributesNotAcceptedErrorMessage);
         }
 
         $validationLogicResponse = $this->runValidationLogicHook($credentialsOrAttributes);
         if($validationLogicResponse === false)
         {
-            return $this->sendMessage('Attributes failed validation.');
+            return $this->sendMessage($this->attributesFailedValidationErrorMessage);
         }
 
         $manipulatedAttributes = $this->runPREandPOSTHooksAndReturnManipulatedAttributes($credentialsOrAttributes);
         if(!is_array($manipulatedAttributes))
         {
-            throw new \Exception('Array not returned from the runAttributeManipulationLogic method.');
+            throw new \Exception($this->arrayNotReturnedFromManipulationLogicErrorMessage);
         }
 
         $newModel = $this->addAttributesToNewModel($manipulatedAttributes);
         if(!$this->isInstanceOfModel($newModel))
         {
-            throw new \Exception('New model was not created.');
+            throw new \Exception($this->newModelNotCreatedErrorMessage);
         }
 
         $storeModelResponse =  $this->storeEloquentModel($newModel);
         if((is_object($storeModelResponse) && $this->isInstanceOfModel($storeModelResponse) == false) ||
             (!is_object($storeModelResponse) && $storeModelResponse == false))
         {
-            throw new \Exception('Model was not stored in database.');
+            throw new \Exception($this->modelNotStoredInDBErrorMessage);
         }
         return $storeModelResponse;
     }
@@ -109,7 +115,7 @@ abstract class BaseInternalService extends ModelManager {
         $attributesAreValid = $this->runValidationLogicHook($attributes);
         if($attributesAreValid === false)
         {
-            return $this->sendMessage('Attributes failed validation.');
+            return $this->sendMessage($this->attributesFailedValidationErrorMessage);
         }
 
         $showMethodCallResponse = $this->show($id);
