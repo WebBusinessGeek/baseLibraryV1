@@ -19,8 +19,8 @@ abstract class BaseInternalService extends ModelManager {
     protected $modelNotStoredInDBErrorMessage = 'Model was not stored in database.';
     protected $modelNotSetErrorMessage = 'Model is not set on Internal Service';
     protected $attributesNotSetOnModelErrorMessage = 'Attributes not set on Model';
+    protected $noModelFoundByIdErrorMessage = 'No model by id';
 
-    
     use AttributeValidationHooks;
 
     public function __construct()
@@ -91,7 +91,7 @@ abstract class BaseInternalService extends ModelManager {
         $modelExistsCheck = $this->checkIfModelExists($id);
         if(!$modelExistsCheck)
         {
-            return $this->sendMessage('No model by id: ' . $id);
+            return $this->sendMessageWithParameter($this->noModelFoundByIdErrorMessage, $id);
         }
         return $this->getEloquentModelFromDatabaseById($id);
     }
@@ -112,7 +112,7 @@ abstract class BaseInternalService extends ModelManager {
         $attributeAcceptedByModel = $this->checkModelAcceptsAttributes($attributes);
         if(!$attributeAcceptedByModel)
         {
-            return $this->sendMessage('Attributes are not accepted by model.');
+            return $this->sendMessage($this->attributesNotAcceptedErrorMessage);
         }
 
         $attributesAreValid = $this->runValidationLogicHook($attributes);
@@ -167,6 +167,15 @@ abstract class BaseInternalService extends ModelManager {
     }
 
 
+    /**Returns the message and parameter passed in.
+     * @param $message
+     * @param $parameter
+     * @return string
+     */
+    public function sendMessageWithParameter($message, $parameter)
+    {
+        return $this->sendMessage($message. ': '. $parameter);
+    }
 
 
 
