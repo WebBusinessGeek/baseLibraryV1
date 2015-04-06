@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3488430f-fbf7-4678-bf2a-dc854a3d647e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/BaseInternalServiceTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/tests/BaseModelTest.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tests/MockBaseInternalServiceTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tests/MockBaseModelTest.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/BaseModelTest.php" afterPath="$PROJECT_DIR$/app/tests/BaseModelTest.php" />
     </list>
     <ignored path="baseLibrary.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,8 +30,8 @@
       <file leaf-file-name="BaseModelTest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/tests/BaseModelTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="14.748201" vertical-offset="0" max-vertical-offset="10450">
-              <caret line="415" column="0" selection-start-line="415" selection-start-column="0" selection-end-line="415" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.89928055" vertical-offset="0" max-vertical-offset="10600">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -187,7 +183,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="50" width="1431" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -693,8 +689,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/BaseModelTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="14.748201" vertical-offset="0" max-vertical-offset="10450">
-          <caret line="415" column="0" selection-start-line="415" selection-start-column="0" selection-end-line="415" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.89928055" vertical-offset="0" max-vertical-offset="10600">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>

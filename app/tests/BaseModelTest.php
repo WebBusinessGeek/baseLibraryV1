@@ -13,12 +13,18 @@ use Base\MockBaseModel;
 
 class BaseModelTest extends \TestCase {
 
+
+    public function createMockModel()
+    {
+        return new MockBaseModel();
+    }
+
     /**
      * @group baseModelTests
      */
     public function test_getAttributesByName_method_gets_all_attribute_names_available_on_model()
     {
-        $model = new MockBaseModel();
+        $model = $this->createMockModel();
         $attributeNames = $model->getSelfAttributesByName();
         $this->assertEquals('attribute1', $attributeNames[0]);
     }
@@ -33,7 +39,7 @@ class BaseModelTest extends \TestCase {
             'badAttributeName' => 'someValue'
         ];
 
-        $model = new MockBaseModel();
+        $model = $this->createMockModel();
         $response = $model->checkSelfAcceptsAttributes($badAttributes);
 
         $this->assertFalse($response);
@@ -49,7 +55,7 @@ class BaseModelTest extends \TestCase {
             'attribute1' => 'someValue'
         ];
 
-        $model = new MockBaseModel();
+        $model = $this->createMockModel();
         $response = $model->checkSelfAcceptsAttributes($goodAttributes);
 
         $this->assertTrue($response);
@@ -61,7 +67,7 @@ class BaseModelTest extends \TestCase {
      */
     public function test_getSelfClassName_method_returns_name_of_class()
     {
-        $mockModel = new MockBaseModel();
+        $mockModel = $this->createMockModel();
 
         $className = $mockModel->getSelfClassName();
 
@@ -83,7 +89,7 @@ class BaseModelTest extends \TestCase {
             'attribute3' => 'value3',
         ];
 
-        $mockModel = new MockBaseModel();
+        $mockModel = $this->createMockModel();
         $updatedMockModel = $mockModel->updateSelfAttributes($attributes);
 
         for($count = 1; $count <= 3; $count++)
@@ -103,7 +109,7 @@ class BaseModelTest extends \TestCase {
     {
         $validOption = 'name';
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->isValidOptionForSelfAttributes($validOption);
 
         $this->assertTrue($response);
@@ -116,7 +122,7 @@ class BaseModelTest extends \TestCase {
     {
         $invalidOption = 'badOption';
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->isValidOptionForSelfAttributes($invalidOption);
 
         $this->assertFalse($response);
@@ -130,7 +136,7 @@ class BaseModelTest extends \TestCase {
         $validValue = 'email';
         $validOption = 'format';
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->isValidValueForSelfAttributeOption($validOption, $validValue);
 
         $this->assertTrue($response);
@@ -144,7 +150,7 @@ class BaseModelTest extends \TestCase {
         $invalidValue = 'badValue';
         $validOption = 'format';
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->isValidValueForSelfAttributeOption($validOption, $invalidValue);
 
         $this->assertfalse($response);
@@ -159,7 +165,7 @@ class BaseModelTest extends \TestCase {
         $validValue = 'email';
         $invalidOption = 'badOption';
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
 
         $this->setExpectedException('Exception', 'Option: '.$invalidOption.' may not exist or not have configurable options.');
         $mockBaseModel->isValidValueForSelfAttributeOption($invalidOption, $validValue);
@@ -174,7 +180,7 @@ class BaseModelTest extends \TestCase {
 
         $validValue = 'email';
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->getNamesOfSelfAttributesWhereOptionAndValueMatchThis($validOption, $validValue);
 
         $this->assertTrue(is_array($response));
@@ -191,7 +197,7 @@ class BaseModelTest extends \TestCase {
 
         $this->setExpectedException('Exception', $invalidOption . ' - is an invalid option for Model Attributes');
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $mockBaseModel->getNamesOfSelfAttributesWhereOptionAndValueMatchThis($invalidOption, $validValue);
     }
 
@@ -206,7 +212,7 @@ class BaseModelTest extends \TestCase {
 
         $this->setExpectedException('Exception', $invalidValue. ' - is an invalid value for Model Attribute Option: ' . $validOption);
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $mockBaseModel->getNamesOfSelfAttributesWhereOptionAndValueMatchThis($validOption, $invalidValue);
     }
 
@@ -221,7 +227,7 @@ class BaseModelTest extends \TestCase {
 
         $this->setExpectedException('Exception', 'No attributes on the Model have '. $validValueButNotPresent.' as value for Model Attribute Option: '. $validOption);
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $mockBaseModel->getNamesOfSelfAttributesWhereOptionAndValueMatchThis($validOption, $validValueButNotPresent);
     }
 
@@ -234,7 +240,7 @@ class BaseModelTest extends \TestCase {
     {
         $defaultInvalidCharacters = "/[$%^&*()\-_+={}|\\[\]:;\"'<>?,.\/]/";
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->getInvalidCharactersForStringValidation();
 
         $this->assertEquals($defaultInvalidCharacters, $response);
@@ -248,7 +254,7 @@ class BaseModelTest extends \TestCase {
     {
         $stringWithInvalidCharacters = 'badString??$';
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->isInvalidCharactersPresentInString($stringWithInvalidCharacters);
 
         $this->assertTrue($response);
@@ -261,7 +267,7 @@ class BaseModelTest extends \TestCase {
     {
         $stringWithNoInvalidCharacters = 'goodString';
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->isInvalidCharactersPresentInString($stringWithNoInvalidCharacters);
 
         $this->assertFalse($response);
@@ -275,7 +281,7 @@ class BaseModelTest extends \TestCase {
     {
         $goodString = 'goodString';
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->stringIsValid($goodString);
 
         $this->assertTrue($response);
@@ -288,7 +294,7 @@ class BaseModelTest extends \TestCase {
     {
         $badString = 'badString!!#&@#';
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->stringIsValid($badString);
 
         $this->assertFalse($response);
@@ -312,7 +318,7 @@ class BaseModelTest extends \TestCase {
             'key2','key3','key5','dummyKey'
         ];
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->getValuesFromAssociativeArrayWhereKeysMatch($associativeArrayToTest, $keysToMatch);
 
         $this->assertEquals(3, count($response));
@@ -335,7 +341,7 @@ class BaseModelTest extends \TestCase {
             'dummyKey2','dummyKey3','dummyKey5','dummyKey1'
         ];
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->getValuesFromAssociativeArrayWhereKeysMatch($associativeArrayToTest, $keysToMatch);
 
         $this->assertTrue(is_array($response));
@@ -358,7 +364,7 @@ class BaseModelTest extends \TestCase {
             'dummyKey2','dummyKey3','dummyKey5','dummyKey1'
         ];
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->getValuesFromAssociativeArrayWhereKeysMatch($associativeArrayToTest, $keysToMatch);
 
         $this->assertEquals(0, count($response));
@@ -376,7 +382,7 @@ class BaseModelTest extends \TestCase {
             'attribute3' => 'badString$#$#$',
         ];
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->checkIfStringAttributesAreValid($oneBadStringPresent);
 
         $this->assertFalse($response);
@@ -393,7 +399,7 @@ class BaseModelTest extends \TestCase {
             'attribute3' => 'goodString3',
         ];
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->checkIfStringAttributesAreValid($noBadStringsPresent);
 
         $this->assertTrue($response);
@@ -408,7 +414,7 @@ class BaseModelTest extends \TestCase {
             'attribute4' => null,
         ];
 
-        $mockBaseModel = new MockBaseModel();
+        $mockBaseModel = $this->createMockModel();
         $response = $mockBaseModel->checkIfStringAttributesAreValid($noStringsPresentAtAll);
 
         $this->assertTrue($response);
