@@ -22,7 +22,7 @@ abstract class BaseInternalService extends ModelManager {
     protected $noModelFoundByIdErrorMessage = 'No model by id';
 
     protected $parameterNotStringErrorMessage = 'Parameter must be of type - string';
-    
+
     use AttributeValidationHooks;
 
     public function __construct()
