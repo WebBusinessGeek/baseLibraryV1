@@ -209,10 +209,11 @@ trait ModelAttributeManagement {
     {
         if(!isset($this->validAttributeValues[$option]))
         {
-            $this->throwUnconfigurableOptionException($option);
+            $this->throwUnConfigurableOptionException($option);
         }
         return in_array($value, $this->validAttributeValues[$option]);
     }
+
 
     /**
      * @param $option
@@ -247,9 +248,31 @@ trait ModelAttributeManagement {
      * @param $option
      * @throws \Exception
      */
-    public function throwUnconfigurableOptionException($option)
+    public function throwUnConfigurableOptionException($option)
     {
         throw new \Exception('Option: ' . $option . ' may not exist or not have configurable options.');
     }
+
+    /**Returns ALL values from an associative array where its key matches one of the $keysToMatch.
+     * Values returned as an array.
+     * If no values are returned the array will be empty.
+     * @param array $associativeArrayToBeChecked
+     * @param array $keysToMatch
+     * @return array
+     */
+    public function getValuesFromAssociativeArrayWhereKeysMatch($associativeArrayToBeChecked = [], $keysToMatch = [])
+    {
+        $valuesWhereKeysWereMatched = [];
+
+        foreach($associativeArrayToBeChecked as $keyToCheck => $valueToPushIfKeyMatches)
+        {
+            if(in_array($keyToCheck, $keysToMatch))
+            {
+                array_push($valuesWhereKeysWereMatched, $valueToPushIfKeyMatches);
+            }
+        }
+        return $valuesWhereKeysWereMatched;
+    }
+
 
 }

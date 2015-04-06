@@ -32,26 +32,7 @@ abstract class BaseModel extends Model{
         return $this->primaryOwnerClassName;
     }
 
-    /**Returns ALL values from an associative array where its key matches one of the $keysToMatch.
-     * Values returned as an array.
-     * If no values are returned the array will be empty.
-     * @param array $associativeArrayToBeChecked
-     * @param array $keysToMatch
-     * @return array
-     */
-    public function getValuesFromAssociativeArrayWhereKeysMatch($associativeArrayToBeChecked = [], $keysToMatch = [])
-    {
-        $valuesWhereKeysWereMatched = [];
 
-        foreach($associativeArrayToBeChecked as $keyToCheck => $valueToPushIfKeyMatches)
-        {
-            if(in_array($keyToCheck, $keysToMatch))
-            {
-                array_push($valuesWhereKeysWereMatched, $valueToPushIfKeyMatches);
-            }
-        }
-        return $valuesWhereKeysWereMatched;
-    }
 
 
 
