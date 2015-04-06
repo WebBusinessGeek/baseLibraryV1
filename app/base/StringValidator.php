@@ -12,6 +12,7 @@ namespace Base;
 trait StringValidator {
 
     protected $invalidCharactersForStringValidation = "/[$%^&*()\-_+={}|\\[\]:;\"'<>?,.\/]/";
+    protected $argumentNotAStringErrorMessage = 'Argument passed is not a string.';
 
     /**Checks if string is valid.
      * Returns TRUE if it is a valid string.
@@ -25,7 +26,7 @@ trait StringValidator {
     {
         if(!is_string($stringToCheck))
         {
-            throw new \Exception('Argument passed is not a string.');
+            throw new \Exception($this->argumentNotAStringErrorMessage);
         }
         return(!$this->isInvalidCharactersPresentInString($stringToCheck))? :false;
     }

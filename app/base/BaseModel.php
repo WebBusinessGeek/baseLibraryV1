@@ -27,6 +27,11 @@ abstract class BaseModel extends Model{
         return '\\'. get_class($this);
     }
 
+    public function getSelfPrimaryOwnerClassName()
+    {
+        return $this->primaryOwnerClassName;
+    }
+
     /**Returns ALL values from an associative array where its key matches one of the $keysToMatch.
      * Values returned as an array.
      * If no values are returned the array will be empty.
@@ -47,13 +52,6 @@ abstract class BaseModel extends Model{
         }
         return $valuesWhereKeysWereMatched;
     }
-
-
-    public function getSelfPrimaryOwnerClassName()
-    {
-        return $this->primaryOwnerClassName;
-    }
-
 
 
 
