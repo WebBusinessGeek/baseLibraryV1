@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
 abstract class BaseModel extends Model{
 
     use ModelAttributeManagement, StringValidator;
-    
+
     protected $primaryOwnerClassName;
 
     protected $multiOwnerClassNames = [];

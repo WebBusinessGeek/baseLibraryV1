@@ -97,11 +97,11 @@ trait ModelAttributeManagement {
     {
         if(!$this->isValidOptionForSelfAttributes($option))
         {
-            throw new \Exception($option .' - is an invalid option for Model Attributes');
+            $this->throwInvalidOptionForModelAttributesException($option);
         }
         elseif(!$this->isValidValueForSelfAttributeOption($option, $value) == true)
         {
-            throw new \Exception($value .' - is an invalid value for Model Attribute Option: '. $option);
+            $this->throwInvalidValueForModelAttributeOptionException($option, $value);
         }
 
         $namesOfAttributesThatMatch = [];
@@ -116,7 +116,7 @@ trait ModelAttributeManagement {
         }
         if(!count($namesOfAttributesThatMatch) > 0)
         {
-            throw new \Exception('No attributes on the Model have '. $value . ' as value for Model Attribute Option: ' .$option);
+            $this->throwNoAttributesHaveValueSetForModelAttributeOptionException($option, $value);
         }
         return $namesOfAttributesThatMatch;
     }
@@ -209,9 +209,47 @@ trait ModelAttributeManagement {
     {
         if(!isset($this->validAttributeValues[$option]))
         {
-            throw new \Exception('Option: '. $option .' may not exist or not have configurable options.');
+            $this->throwUnconfigurableOptionException($option);
         }
         return in_array($value, $this->validAttributeValues[$option]);
+    }
+
+    /**
+     * @param $option
+     * @throws \Exception
+     */
+    public function throwInvalidOptionForModelAttributesException($option)
+    {
+        throw new \Exception($option . ' - is an invalid option for Model Attributes');
+    }
+
+    /**
+     * @param $option
+     * @param $value
+     * @throws \Exception
+     */
+    public function throwInvalidValueForModelAttributeOptionException($option, $value)
+    {
+        throw new \Exception($value . ' - is an invalid value for Model Attribute Option: ' . $option);
+    }
+
+    /**
+     * @param $option
+     * @param $value
+     * @throws \Exception
+     */
+    public function throwNoAttributesHaveValueSetForModelAttributeOptionException($option, $value)
+    {
+        throw new \Exception('No attributes on the Model have ' . $value . ' as value for Model Attribute Option: ' . $option);
+    }
+
+    /**
+     * @param $option
+     * @throws \Exception
+     */
+    public function throwUnconfigurableOptionException($option)
+    {
+        throw new \Exception('Option: ' . $option . ' may not exist or not have configurable options.');
     }
 
 }
