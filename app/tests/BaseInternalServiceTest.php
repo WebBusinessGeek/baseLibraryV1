@@ -2,23 +2,20 @@
 /**
  * Created by PhpStorm.
  * User: MacBookEr
- * Date: 3/24/15
- * Time: 11:04 AM
+ * Date: 4/6/15
+ * Time: 4:16 PM
  */
-
 namespace tests;
-
 
 use Base\MockBaseInternalService as MockBaseInternalService;
 use Base\MockBaseModel;
 use Base\MockBaseModelWithoutAttributes;
 use Illuminate\Support\Facades\DB;
 
-class MockBaseInternalServiceTest extends \TestCase {
-
+class BaseInternalServiceTest extends \TestCase {
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      * @group internalServiceConstructorTests
      * @group internalServiceFrameworkTests
      */
@@ -30,7 +27,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      * @group internalServiceConstructorTests
      * @group internalServiceFrameworkTests
      */
@@ -43,7 +40,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      * @group internalServiceConstructorTests
      * @group internalServiceFrameworkTests
      */
@@ -63,7 +60,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
 
     /**
-     *@group mockInternalServiceTests
+     *@group baseInternalServiceTests
      */
     public function test_checkModelAcceptsAttributes_method_returns_false_if_model_does_not_accept_attribute_names()
     {
@@ -80,7 +77,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     *@group mockInternalServiceTests
+     *@group baseInternalServiceTests
      */
     public function test_checkModelAcceptsAttributes_method_returns_true_if_model_does_accept_attribute_names()
     {
@@ -98,7 +95,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
 
     /**
-     *@group mockInternalServiceTests
+     *@group baseInternalServiceTests
      */
     public function test_getModelClassName_method_returns_className_of_the_model_property_object()
     {
@@ -112,7 +109,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     *@group mockInternalServiceTests
+     *@group baseInternalServiceTests
      */
     public function test_createNewModelInstance_method_returns_a_instance_of_the_model_property_object()
     {
@@ -129,7 +126,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
 
     /**
-     *@group mockInternalServiceTests
+     *@group baseInternalServiceTests
      */
     public function test_updateAttributesOnExistingModel_method_returns_model()
     {
@@ -150,7 +147,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     *@group mockInternalServiceTests
+     *@group baseInternalServiceTests
      */
     public function test_updateAttributesOnExistingModel_method_returns_model_with_correct_attributes()
     {
@@ -174,7 +171,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     *@group mockInternalServiceTests
+     *@group baseInternalServiceTests
      */
     public function test_addAttributesToNewModel_method_returns_a_model()
     {
@@ -193,7 +190,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     *@group mockInternalServiceTests
+     *@group baseInternalServiceTests
      */
     public function test_addAttributesToNewModel_method_returns_a_model_with_correct_attributes()
     {
@@ -216,7 +213,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_storeEloquentModel_method_returns_model_if_returnInstance_true()
     {
@@ -240,7 +237,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_storeEloquentModel_method_returns_boolean_if_returnInstance_set_to_false()
     {
@@ -264,7 +261,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_isInstanceOfModel_method_returns_false_if_model_passed_is_not_an_object()
     {
@@ -275,11 +272,11 @@ class MockBaseInternalServiceTest extends \TestCase {
 
         $response = $internalService->isInstanceOfModel($notAnObject);
 
-       $this->assertFalse($response);
+        $this->assertFalse($response);
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_isInstanceOfModel_method_returns_false_if_model_passed_is_not_instance_of_propertyModel()
     {
@@ -294,7 +291,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_isInstanceOfModel_method_returns_true_if_model_passed_is_instance_of_propertyModel()
     {
@@ -307,7 +304,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_store_method_sends_error_message_if_attributes_are_not_accepted_by_model()
     {
@@ -326,7 +323,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_store_method_sends_error_message_if_attributes_fail_child_implemented_validation_methods()
     {
@@ -344,7 +341,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_store_method_returns_new_model_on_success()
     {
@@ -363,7 +360,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_store_method_returns_model_of_correct_class_on_success()
     {
@@ -383,7 +380,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_attemptToRetrieveEloquentModelFromDatabase_method_throws_an_exception_if_model_does_not_exist()
     {
@@ -397,7 +394,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_attemptToRetrieveEloquentModelFromDatabase_method_returns_correct_instance_if_model_exists()
     {
@@ -419,7 +416,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_attemptToRetrieveEloquentModelFromDatabase_method_returns_correct_class_if_model_exists()
     {
@@ -441,7 +438,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_checkIfModelExists_method_returns_false_if_model_with_given_id_does_not_exist()
     {
@@ -455,7 +452,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_checkIfModelExists_method_returns_true_if_model_with_given_id_does_exists_in_database_table()
     {
@@ -477,7 +474,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_show_method_returns_error_message_if_model_with_given_id_does_not_exists()
     {
@@ -491,7 +488,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_show_method_returns_correct_class_if_model_with_given_id_exists()
     {
@@ -513,7 +510,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_show_method_returns_correct_instance_if_model_with_given_id_exists()
     {
@@ -536,7 +533,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_update_method_returns_error_message_if_model_does_not_accept_attributes()
     {
@@ -565,7 +562,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_update_method_returns_error_message_if_attributes_fail_validation()
     {
@@ -593,7 +590,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_update_method_returns_error_message_if_model_does_not_exists()
     {
@@ -613,7 +610,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_update_method_returns_correct_class_if_model_exists_and_attributes_are_valid()
     {
@@ -642,7 +639,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_update_method_returns_correct_instance_if_model_exists_and_attributes_are_valid()
     {
@@ -671,7 +668,7 @@ class MockBaseInternalServiceTest extends \TestCase {
 
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_update_method_returns_model_with_updated_attributes_if_model_exists_and_attributes_are_valid()
     {
@@ -699,7 +696,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_update_method_saves_updates_in_database()
     {
@@ -729,7 +726,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_deleteEloquentModel_method_removes_identified_model_from_database()
     {
@@ -751,7 +748,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_deleteEloquentModel_method_returns_true_on_success()
     {
@@ -770,7 +767,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_destroy_method_returns_error_message_if_model_does_not_exist()
     {
@@ -786,7 +783,7 @@ class MockBaseInternalServiceTest extends \TestCase {
     }
 
     /**
-     * @group mockInternalServiceTests
+     * @group baseInternalServiceTests
      */
     public function test_destroy_method_returns_true_on_success()
     {
@@ -805,8 +802,6 @@ class MockBaseInternalServiceTest extends \TestCase {
 
         $this->assertTrue($response);
     }
-
-
 
 
 }

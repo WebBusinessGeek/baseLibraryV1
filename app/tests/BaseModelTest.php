@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: MacBookEr
- * Date: 3/24/15
- * Time: 1:32 PM
+ * Date: 4/6/15
+ * Time: 4:20 PM
  */
 
 namespace tests;
@@ -11,8 +11,7 @@ namespace tests;
 
 use Base\MockBaseModel;
 
-class MockBaseModelTest extends \TestCase {
-
+class BaseModelTest extends \TestCase {
 
     /**
      * @group baseModelTests
@@ -414,6 +413,5 @@ class MockBaseModelTest extends \TestCase {
 
         $this->assertTrue($response);
     }
-
 
 }
