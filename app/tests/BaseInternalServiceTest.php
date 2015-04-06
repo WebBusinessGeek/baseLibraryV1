@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\DB;
 
 class BaseInternalServiceTest extends \TestCase {
 
+    public function createMockInternalService()
+    {
+        $mockBaseModel = new MockBaseModel();
+        return new MockBaseInternalService($mockBaseModel);
+    }
+
     /**
      * @group baseInternalServiceTests
      * @group internalServiceConstructorTests
@@ -48,8 +54,7 @@ class BaseInternalServiceTest extends \TestCase {
     {
         $exceptionCatcher = null;
         try{
-            $mockBaseModelWithAttributes = new MockBaseModel();
-            $mockBaseInternalService = new MockBaseInternalService($mockBaseModelWithAttributes);
+            $this->createMockInternalService();
         }
         catch(\Exception $e)
         {
@@ -69,8 +74,7 @@ class BaseInternalServiceTest extends \TestCase {
             'badAttribute2' => 'someValue'
         ];
 
-        $mockBaseModel = new MockBaseModel();
-        $internalService = new MockBaseInternalService($mockBaseModel);
+        $internalService = $this->createMockInternalService();
 
         $response = $internalService->checkModelAcceptsAttributes($badAttributes);
         $this->assertFalse($response);
@@ -86,8 +90,7 @@ class BaseInternalServiceTest extends \TestCase {
             'attribute2' => 'someValue',
         ];
 
-        $mockBaseModel = new MockBaseModel();
-        $internalService = new MockBaseInternalService($mockBaseModel);
+        $internalService = $this->createMockInternalService();
 
         $response = $internalService->checkModelAcceptsAttributes($goodAttributes);
         $this->assertTrue($response);
