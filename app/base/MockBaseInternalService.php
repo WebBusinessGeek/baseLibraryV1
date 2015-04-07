@@ -29,6 +29,32 @@ class MockBaseInternalService extends BaseInternalService {
         return $stringValidationCheck;
     }
 
+   /* public function runPREAttributeManipulationLogic($credentialsOrAttributes = [])
+    {
+        //add the relationship
+        if($this->detectModelRelationships($credentialsOrAttributes))
+        {
+            $this->addModelRelationships($credentialsOrAttributes);
+        }
+    }
+
+    public function runAttributeManipulationLogic($credentialsOrAttributes = [])
+    {
+        //remove the relationship from the attributes
+        if($this->detectModelRelationships($credentialsOrAttributes))
+        {
+            $attributesWithoutRelationships = $this->removeRelationshipRelatedAttributes($credentialsOrAttributes);
+        }
+        return $attributesWithoutRelationships;
+    }
+
+    public function runPOSTAttributeManipulationLogic($credentialsOrAttributes = [], $manipulatedAttributes = [])
+    {
+        //nothing
+    }*/
+
+
+
 
 
 }

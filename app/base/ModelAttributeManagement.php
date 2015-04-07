@@ -18,7 +18,7 @@ trait ModelAttributeManagement {
     protected $validAttributeValues = [
         'format' => [
             'email', 'phoneNumber','url','password','string','exists','enum',
-            'text','id','token','ipAddress','date'
+            'text','id','token','ipAddress','date', 'relationship',
         ],
         'nullable' => [
             true, false

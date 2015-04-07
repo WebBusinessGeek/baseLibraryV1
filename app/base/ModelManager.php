@@ -160,4 +160,14 @@ abstract class ModelManager {
     }
 
 
+    /**UNTESTED
+     * @param array $attributes
+     * @param Model $model
+     * @return mixed
+     */
+    public function addAttributesToExistingModel($attributes = [], Model $model)
+    {
+        return $model->updateSelfAttributes($attributes);
+    }
+
 }

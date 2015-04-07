@@ -2,16 +2,16 @@
 /**
  * Created by PhpStorm.
  * User: MacBookEr
- * Date: 3/24/15
- * Time: 11:02 AM
+ * Date: 4/7/15
+ * Time: 2:11 PM
  */
 
 namespace Base;
 
 
-class MockBaseModel extends BaseModel {
+class MockBaseModelForOneToOne extends BaseModel {
 
-    protected $table = 'mockBaseModels';
+    protected $table = 'mockBaseModelForOneToOnes';
     protected $fillable = ['attribute1','attribute2','attribute3'];
 
     protected $modelAttributes = [
@@ -106,24 +106,9 @@ class MockBaseModel extends BaseModel {
             'identifier' => false,
 
             'key' => false,
-        ],
-
-        4 => [
-            'name' => 'mockBaseModelOneToOne',
-
-            'format' => 'relationship',
-
-            'nullable' => false,
-
-            'unique' => true,
-
-            'exists' => null,
-
-            'identifier' => false,
-
-            'key' => false,
         ]
     ];
+
 
 
 }

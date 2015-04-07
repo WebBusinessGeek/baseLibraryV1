@@ -10,6 +10,8 @@ namespace Base;
 
 
 
+use Illuminate\Database\Eloquent\Model;
+
 abstract class BaseInternalService extends ModelManager {
 
     protected $attributesFailedValidationErrorMessage = 'Attributes failed validation.';
@@ -20,6 +22,7 @@ abstract class BaseInternalService extends ModelManager {
     protected $modelNotSetErrorMessage = 'Model is not set on Internal Service';
     protected $attributesNotSetOnModelErrorMessage = 'Attributes not set on Model';
     protected $noModelFoundByIdErrorMessage = 'No model by id';
+    protected $modelNotUpdatedErrorMessage = 'Model was not updated';
 
     protected $parameterNotStringErrorMessage = 'Parameter must be of type - string';
 
@@ -60,24 +63,31 @@ abstract class BaseInternalService extends ModelManager {
             return $this->sendMessage($this->attributesFailedValidationErrorMessage);
         }
 
-        $manipulatedAttributes = $this->runPREandPOSTHooksAndReturnManipulatedAttributes($credentialsOrAttributes);
-        if(!is_array($manipulatedAttributes))
-        {
-            throw new \Exception($this->arrayNotReturnedFromManipulationLogicErrorMessage);
-        }
-
-        $newModel = $this->addAttributesToNewModel($manipulatedAttributes);
+        $newModel = $this->createNewModelInstance();
         if(!$this->isInstanceOfModel($newModel))
         {
             throw new \Exception($this->newModelNotCreatedErrorMessage);
         }
 
-        $storeModelResponse =  $this->storeEloquentModel($newModel);
+        $manipulatedAttributes = $this->runPREandPOSTHooksAndReturnManipulatedAttributes($credentialsOrAttributes, $newModel);
+        if(!is_array($manipulatedAttributes))
+        {
+            throw new \Exception($this->arrayNotReturnedFromManipulationLogicErrorMessage);
+        }
+
+        $newModelWithAttributes = $this->addAttributesToExistingModel($manipulatedAttributes, $newModel);
+        if(!$this->isInstanceOfModel($newModelWithAttributes))
+        {
+            throw new \Exception($this->modelNotUpdatedErrorMessage);
+        }
+
+        $storeModelResponse =  $this->storeEloquentModel($newModelWithAttributes);
         if((is_object($storeModelResponse) && $this->isInstanceOfModel($storeModelResponse) == false) ||
             (!is_object($storeModelResponse) && $storeModelResponse == false))
         {
             throw new \Exception($this->modelNotStoredInDBErrorMessage);
         }
+
         return $storeModelResponse;
     }
 
@@ -178,6 +188,8 @@ abstract class BaseInternalService extends ModelManager {
     {
         return $this->sendMessage($message. ': '. $parameter);
     }
+
+
 
 
 

@@ -9,6 +9,8 @@
 namespace Base;
 
 
+use Illuminate\Database\Eloquent\Model;
+
 trait AttributeValidationHooks {
 
 
@@ -29,9 +31,9 @@ trait AttributeValidationHooks {
      * @param array $credentialsOrAttributes
      * @return array
      */
-    public function runPREandPOSTHooksAndReturnManipulatedAttributes($credentialsOrAttributes = [])
+    public function runPREandPOSTHooksAndReturnManipulatedAttributes($credentialsOrAttributes = [], Model $model)
     {
-        $this->runPREAttributeManipulationLogic();
+        $this->runPREAttributeManipulationLogic($credentialsOrAttributes, $model);
         $manipulatedAttributes = $this->runAttributeManipulationLogic($credentialsOrAttributes);
         $this->runPOSTAttributeManipulationLogic($credentialsOrAttributes, $manipulatedAttributes);
         return $manipulatedAttributes;
@@ -43,7 +45,7 @@ trait AttributeValidationHooks {
      * Will return NULL at this level.
      * @return string
      */
-    public function runPREAttributeManipulationLogic()
+    public function runPREAttributeManipulationLogic($attributes = [], Model $model)
     {
         return;
     }

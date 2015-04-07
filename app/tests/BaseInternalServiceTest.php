@@ -382,6 +382,30 @@ class BaseInternalServiceTest extends \TestCase {
     }
 
 
+
+
+
+
+    public function test_store_method_throws_exception_attributes_not_returned_from_attributeManipulationLogic_on_child()
+    {
+        //TODO
+    }
+
+    public function test_store_method_returns_instance_on_good_attributes_and_proper_child_hook_implementations()
+    {
+        //TODO
+    }
+
+
+
+
+
+
+
+
+
+
+
     /**
      * @group baseInternalServiceTests
      */
