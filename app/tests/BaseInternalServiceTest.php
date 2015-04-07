@@ -386,7 +386,7 @@ class BaseInternalServiceTest extends \TestCase {
 
 
 
-    public function test_store_method_throws_exception_attributes_not_returned_from_attributeManipulationLogic_on_child()
+    public function test_store_method_throws_exception_if_attributes_not_returned_from_attributeManipulationLogic_on_child()
     {
         //TODO
     }
